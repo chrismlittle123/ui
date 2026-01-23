@@ -45,6 +45,117 @@
     --chart-4: 38 92% 50%;           /* Amber */
     --chart-5: 280 65% 60%;          /* Purple */
 
+    /* Extended color palette - Linear-inspired muted tones */
+    /* Violet/Lavender scale (primary) */
+    --violet-50: 250 30% 95%;
+    --violet-100: 250 35% 85%;
+    --violet-200: 248 40% 75%;
+    --violet-300: 245 50% 68%;
+    --violet-400: 245 58% 62%;
+    --violet-500: 245 58% 55%;
+    --violet-600: 245 55% 48%;
+    --violet-700: 245 50% 40%;
+    --violet-800: 245 45% 32%;
+    --violet-900: 245 40% 24%;
+
+    /* Cyan/Teal scale (accent) */
+    --cyan-50: 185 40% 92%;
+    --cyan-100: 185 50% 82%;
+    --cyan-200: 188 60% 70%;
+    --cyan-300: 190 70% 58%;
+    --cyan-400: 190 75% 50%;
+    --cyan-500: 190 75% 42%;
+    --cyan-600: 190 70% 35%;
+    --cyan-700: 190 65% 28%;
+    --cyan-800: 190 60% 22%;
+    --cyan-900: 190 55% 16%;
+
+    /* Green scale (success - softer for dark theme) */
+    --green-50: 155 30% 92%;
+    --green-100: 155 35% 80%;
+    --green-200: 158 40% 65%;
+    --green-300: 160 45% 52%;
+    --green-400: 162 50% 42%;
+    --green-500: 164 50% 36%;
+    --green-600: 166 48% 30%;
+    --green-700: 168 45% 24%;
+    --green-800: 170 40% 18%;
+    --green-900: 172 35% 12%;
+
+    /* Amber/Yellow scale (warning) */
+    --amber-50: 45 50% 92%;
+    --amber-100: 44 60% 80%;
+    --amber-200: 42 70% 68%;
+    --amber-300: 40 80% 56%;
+    --amber-400: 38 85% 48%;
+    --amber-500: 36 90% 42%;
+    --amber-600: 34 85% 35%;
+    --amber-700: 32 80% 28%;
+    --amber-800: 30 70% 22%;
+    --amber-900: 28 60% 16%;
+
+    /* Red scale (destructive - softer for dark theme) */
+    --red-50: 0 40% 94%;
+    --red-100: 0 50% 82%;
+    --red-200: 0 55% 70%;
+    --red-300: 0 60% 58%;
+    --red-400: 0 65% 50%;
+    --red-500: 0 65% 44%;
+    --red-600: 0 60% 38%;
+    --red-700: 0 55% 30%;
+    --red-800: 0 50% 24%;
+    --red-900: 0 45% 18%;
+
+    /* Blue scale (info) */
+    --blue-50: 210 50% 94%;
+    --blue-100: 210 55% 82%;
+    --blue-200: 210 60% 70%;
+    --blue-300: 210 70% 60%;
+    --blue-400: 210 75% 52%;
+    --blue-500: 210 80% 45%;
+    --blue-600: 210 75% 38%;
+    --blue-700: 210 70% 32%;
+    --blue-800: 210 65% 25%;
+    --blue-900: 210 60% 18%;
+
+    /* Purple scale */
+    --purple-50: 280 35% 94%;
+    --purple-100: 280 40% 82%;
+    --purple-200: 280 45% 70%;
+    --purple-300: 280 55% 60%;
+    --purple-400: 280 60% 52%;
+    --purple-500: 280 65% 45%;
+    --purple-600: 280 60% 38%;
+    --purple-700: 280 55% 30%;
+    --purple-800: 280 50% 24%;
+    --purple-900: 280 45% 18%;
+
+    /* Gray scale (neutral) */
+    --gray-50: 220 6% 90%;
+    --gray-100: 220 6% 80%;
+    --gray-200: 220 6% 65%;
+    --gray-300: 220 6% 50%;
+    --gray-400: 220 6% 40%;
+    --gray-500: 220 6% 30%;
+    --gray-600: 220 6% 22%;
+    --gray-700: 220 6% 15%;
+    --gray-800: 220 6% 10%;
+    --gray-900: 220 6% 7%;
+
+    /* Status colors - optimized for dark backgrounds */
+    --status-completed: 162 50% 42%;     /* Soft teal-green */
+    --status-completed-bg: 162 50% 42% / 0.15;
+    --status-processing: 245 45% 60%;    /* Muted lavender */
+    --status-processing-bg: 245 45% 60% / 0.15;
+    --status-pending: 220 6% 50%;        /* Neutral gray */
+    --status-pending-bg: 220 6% 50% / 0.1;
+    --status-failed: 0 55% 50%;          /* Soft red */
+    --status-failed-bg: 0 55% 50% / 0.15;
+    --status-refunded: 280 45% 55%;      /* Soft purple */
+    --status-refunded-bg: 280 45% 55% / 0.15;
+    --status-cancelled: 220 6% 45%;      /* Dark gray */
+    --status-cancelled-bg: 220 6% 45% / 0.1;
+
     /* Elevation system - Linear uses subtle, layered shadows */
     --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.3);
     --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.4), 0 1px 2px -1px rgb(0 0 0 / 0.4);
