@@ -14,6 +14,7 @@ const stories = [
   { path: "showcase-color-palette--default", name: "ColorPalette" },
   { path: "showcase-blog-post--default", name: "BlogPost" },
   { path: "showcase-data-table--default", name: "DataTable" },
+  { path: "showcase-crm-dashboard--default", name: "CRMDashboard" },
 ];
 
 async function takeScreenshots() {

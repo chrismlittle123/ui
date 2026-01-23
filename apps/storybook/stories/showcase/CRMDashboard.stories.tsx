@@ -22,6 +22,31 @@ import {
   DropdownMenuTrigger,
 } from "@chrislittle/theme";
 
+// Custom status badge component using theme status colors
+const StatusBadge = ({ status }: { status: string }) => {
+  // Map CRM statuses to theme status colors
+  const statusMap: Record<string, string> = {
+    active: "completed",      // Green - positive
+    lead: "processing",       // Purple - in progress
+    churned: "failed",        // Red - negative
+    prospect: "pending",      // Amber - waiting
+    inactive: "cancelled",    // Gray - neutral
+  };
+  const key = statusMap[status.toLowerCase()] || "pending";
+
+  return (
+    <span
+      className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium transition-colors"
+      style={{
+        backgroundColor: `hsl(var(--status-${key}-bg))`,
+        color: `hsl(var(--status-${key}))`,
+      }}
+    >
+      {status}
+    </span>
+  );
+};
+
 const CRMDashboard = () => {
   const customers = [
     { id: 1, name: "Alice Johnson", email: "alice@company.com", status: "Active", value: "$12,500", lastContact: "Today" },
@@ -100,15 +125,7 @@ const CRMDashboard = () => {
                     </div>
                   </TableCell>
                   <TableCell>
-                    <Badge
-                      variant={
-                        customer.status === "Active" ? "default" :
-                        customer.status === "Lead" ? "secondary" :
-                        "outline"
-                      }
-                    >
-                      {customer.status}
-                    </Badge>
+                    <StatusBadge status={customer.status} />
                   </TableCell>
                   <TableCell className="font-medium">{customer.value}</TableCell>
                   <TableCell className="text-muted-foreground">{customer.lastContact}</TableCell>
