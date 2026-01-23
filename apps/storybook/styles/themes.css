@@ -353,3 +353,133 @@
 [data-theme="newspaper"] a {
   color: hsl(var(--link));
 }
+
+/* ============================================
+   THEME: FINCHLY (Warm Terracotta)
+   Earthy, warm - inspired by palindrom-ai/finchly
+   ============================================ */
+
+/* Finchly Light */
+[data-theme="finchly"] {
+  --background: 36 33% 97%;
+  --foreground: 25 15% 15%;
+  --card: 36 25% 98%;
+  --card-foreground: 25 15% 15%;
+  --popover: 36 25% 98%;
+  --popover-foreground: 25 15% 15%;
+  --primary: 12 45% 49%;
+  --primary-foreground: 36 33% 97%;
+  --secondary: 36 20% 92%;
+  --secondary-foreground: 25 15% 18%;
+  --muted: 36 15% 88%;
+  --muted-foreground: 25 8% 45%;
+  --accent: 40 60% 58%;
+  --accent-foreground: 25 15% 15%;
+  --destructive: 0 65% 50%;
+  --destructive-foreground: 36 33% 97%;
+  --success: 145 45% 42%;
+  --success-foreground: 36 33% 97%;
+  --warning: 40 60% 58%;
+  --warning-foreground: 25 15% 15%;
+  --info: 200 45% 50%;
+  --info-foreground: 36 33% 97%;
+  --border: 36 18% 75%;
+  --input: 36 18% 75%;
+  --ring: 12 45% 49%;
+  --ring-offset: 36 33% 97%;
+  --radius: 0.625rem;
+
+  /* Chart colors */
+  --chart-1: 12 45% 49%;
+  --chart-2: 40 60% 58%;
+  --chart-3: 145 45% 42%;
+  --chart-4: 200 45% 50%;
+  --chart-5: 280 35% 50%;
+
+  /* Status colors - light mode */
+  --status-completed: 145 45% 35%;
+  --status-completed-bg: 145 42% 45% / 0.18;
+  --status-processing: 200 50% 40%;
+  --status-processing-bg: 200 48% 50% / 0.18;
+  --status-pending: 40 55% 40%;
+  --status-pending-bg: 40 52% 52% / 0.18;
+  --status-failed: 0 60% 45%;
+  --status-failed-bg: 0 55% 52% / 0.18;
+  --status-refunded: 280 30% 42%;
+  --status-refunded-bg: 280 28% 52% / 0.18;
+  --status-cancelled: 25 10% 40%;
+  --status-cancelled-bg: 25 8% 50% / 0.12;
+
+  /* Extended palette */
+  --terracotta-400: 12 50% 58%;
+  --terracotta-500: 12 45% 49%;
+  --amber-400: 40 65% 62%;
+  --amber-500: 40 60% 58%;
+  --cream-100: 36 35% 98%;
+  --cream-200: 36 30% 95%;
+  --cream-300: 36 25% 90%;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* Finchly Dark */
+[data-theme="finchly"].dark,
+[data-theme="finchly"] .dark {
+  --background: 25 25% 8%;
+  --foreground: 36 20% 92%;
+  --card: 25 20% 12%;
+  --card-foreground: 36 20% 92%;
+  --popover: 25 20% 14%;
+  --popover-foreground: 36 20% 92%;
+  --primary: 12 55% 58%;
+  --primary-foreground: 25 25% 8%;
+  --secondary: 25 15% 16%;
+  --secondary-foreground: 36 18% 88%;
+  --muted: 25 12% 20%;
+  --muted-foreground: 36 10% 55%;
+  --accent: 40 65% 62%;
+  --accent-foreground: 25 25% 8%;
+  --destructive: 0 60% 55%;
+  --destructive-foreground: 36 20% 95%;
+  --success: 145 42% 52%;
+  --success-foreground: 25 25% 8%;
+  --warning: 40 60% 60%;
+  --warning-foreground: 25 25% 8%;
+  --info: 200 45% 58%;
+  --info-foreground: 25 25% 8%;
+  --border: 25 12% 28%;
+  --input: 25 12% 28%;
+  --ring: 12 55% 58%;
+  --ring-offset: 25 25% 8%;
+
+  /* Chart colors - dark mode */
+  --chart-1: 12 55% 58%;
+  --chart-2: 40 65% 62%;
+  --chart-3: 145 42% 52%;
+  --chart-4: 200 45% 58%;
+  --chart-5: 280 35% 58%;
+
+  /* Status colors - dark mode */
+  --status-completed: 145 42% 62%;
+  --status-completed-bg: 145 38% 48% / 0.15;
+  --status-processing: 200 48% 65%;
+  --status-processing-bg: 200 44% 52% / 0.15;
+  --status-pending: 40 58% 65%;
+  --status-pending-bg: 40 52% 55% / 0.12;
+  --status-failed: 0 58% 65%;
+  --status-failed-bg: 0 52% 55% / 0.15;
+  --status-refunded: 280 28% 65%;
+  --status-refunded-bg: 280 25% 55% / 0.15;
+  --status-cancelled: 25 10% 60%;
+  --status-cancelled-bg: 25 8% 48% / 0.12;
+
+  /* Extended palette - dark mode */
+  --terracotta-400: 12 55% 65%;
+  --terracotta-500: 12 55% 58%;
+  --amber-400: 40 65% 68%;
+  --amber-500: 40 65% 62%;
+  --cream-100: 36 15% 18%;
+  --cream-200: 36 12% 16%;
+  --cream-300: 36 10% 14%;
+}

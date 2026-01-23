@@ -13,3 +13,4 @@ export {
   AccordionTrigger,
   AccordionContent,
 } from "./accordion";
+export { PageSection, type PageSectionProps } from "./page-section";

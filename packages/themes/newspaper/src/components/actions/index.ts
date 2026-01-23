@@ -16,3 +16,5 @@ export {
   DropdownMenuSubTrigger,
   DropdownMenuRadioGroup,
 } from "./dropdown-menu";
+export { IconButton, iconButtonVariants, type IconButtonProps } from "./icon-button";
+export { Toggle, toggleVariants, type ToggleProps } from "./toggle";

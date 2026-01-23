@@ -1,0 +1,229 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   THEME: FINCHLY (Warm, Earthy, Terracotta)
+   Distinctive, warm aesthetic with cream backgrounds
+   Based on: https://github.com/palindrom-ai/finchly
+   ============================================ */
+@layer base {
+  :root {
+    /* Finchly: Warm cream backgrounds, terracotta accents */
+    --background: 36 33% 97%;          /* #faf8f5 - Warm cream */
+    --foreground: 0 0% 23%;            /* #3b3b3b - Warm dark gray */
+    --card: 0 0% 100%;                 /* Pure white cards */
+    --card-foreground: 0 0% 23%;       /* #3a3a3a */
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 23%;
+    --primary: 12 45% 49%;             /* #b55643 - Terracotta */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 60% 58%;           /* #d4a954 - Golden amber */
+    --secondary-foreground: 0 0% 23%;
+    --muted: 40 20% 90%;               /* #e7e3d6 - Warm muted */
+    --muted-foreground: 0 0% 42%;      /* #6b6b6b */
+    --accent: 40 60% 58%;              /* #d4a954 - Same as secondary */
+    --accent-foreground: 0 0% 23%;
+    --destructive: 6 92% 44%;          /* #db1b06 - Bright red */
+    --destructive-foreground: 0 0% 100%;
+    --success: 152 100% 20%;           /* #006430 - Forest green */
+    --success-foreground: 0 0% 100%;
+    --warning: 30 95% 34%;             /* #a65006 - Deep orange */
+    --warning-foreground: 0 0% 100%;
+    --info: 210 80% 50%;               /* Blue */
+    --info-foreground: 0 0% 100%;
+    --border: 40 18% 83%;              /* #ddd8cc - Warm border */
+    --input: 40 20% 90%;               /* #e7e3d6 */
+    --ring: 12 45% 49%;                /* Terracotta ring */
+    --ring-offset: 36 33% 97%;         /* Matches background */
+    --radius: 0.625rem;                /* 10px - Larger, softer corners */
+
+    /* Gradient support */
+    --gradient-start: 12 45% 49%;      /* Terracotta */
+    --gradient-end: 40 60% 58%;        /* Golden amber */
+
+    /* Shadow tokens - subtle and warm */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.04);
+    --shadow-card: 0 2px 5px -1px rgb(0 0 0 / 0.04), 0 1px 3px -1px rgb(0 0 0 / 0.08);
+    --shadow-elevated: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.08);
+
+    /* Chart colors for data visualization */
+    --chart-1: 12 45% 49%;             /* Terracotta */
+    --chart-2: 40 60% 58%;             /* Golden amber */
+    --chart-3: 210 50% 55%;            /* Muted blue */
+    --chart-4: 150 40% 40%;            /* Sage green */
+    --chart-5: 30 60% 60%;             /* Warm tan */
+
+    /* Extended Finchly color palette */
+    /* Terracotta scale (primary) */
+    --terracotta-50: 12 60% 97%;
+    --terracotta-100: 12 55% 92%;
+    --terracotta-200: 12 50% 82%;
+    --terracotta-300: 12 48% 68%;
+    --terracotta-400: 12 46% 56%;
+    --terracotta-500: 12 45% 49%;
+    --terracotta-600: 12 48% 40%;
+    --terracotta-700: 12 50% 32%;
+    --terracotta-800: 12 52% 25%;
+    --terracotta-900: 12 55% 18%;
+
+    /* Amber scale (secondary/accent) */
+    --amber-50: 40 80% 96%;
+    --amber-100: 40 75% 88%;
+    --amber-200: 40 70% 78%;
+    --amber-300: 40 65% 68%;
+    --amber-400: 40 62% 62%;
+    --amber-500: 40 60% 58%;
+    --amber-600: 40 58% 48%;
+    --amber-700: 40 55% 38%;
+    --amber-800: 40 52% 28%;
+    --amber-900: 40 50% 20%;
+
+    /* Cream scale (backgrounds) */
+    --cream-50: 36 50% 99%;
+    --cream-100: 36 40% 97%;
+    --cream-200: 36 33% 94%;
+    --cream-300: 38 28% 90%;
+    --cream-400: 40 22% 84%;
+    --cream-500: 40 20% 78%;
+    --cream-600: 40 18% 68%;
+    --cream-700: 40 16% 55%;
+    --cream-800: 40 14% 40%;
+    --cream-900: 40 12% 25%;
+
+    /* Green scale (success - forest) */
+    --green-50: 150 60% 96%;
+    --green-100: 150 55% 88%;
+    --green-200: 150 50% 75%;
+    --green-300: 152 60% 55%;
+    --green-400: 152 80% 35%;
+    --green-500: 152 100% 20%;
+    --green-600: 152 100% 16%;
+    --green-700: 152 95% 12%;
+    --green-800: 152 90% 9%;
+    --green-900: 152 85% 6%;
+
+    /* Red scale (destructive) */
+    --red-50: 6 100% 97%;
+    --red-100: 6 100% 92%;
+    --red-200: 6 95% 82%;
+    --red-300: 6 92% 68%;
+    --red-400: 6 92% 55%;
+    --red-500: 6 92% 44%;
+    --red-600: 6 88% 36%;
+    --red-700: 6 84% 28%;
+    --red-800: 6 80% 22%;
+    --red-900: 6 76% 15%;
+
+    /* Orange scale (warning/moderate) */
+    --orange-50: 30 100% 96%;
+    --orange-100: 30 100% 88%;
+    --orange-200: 30 98% 75%;
+    --orange-300: 30 96% 58%;
+    --orange-400: 30 95% 45%;
+    --orange-500: 30 95% 34%;
+    --orange-600: 30 90% 28%;
+    --orange-700: 30 85% 22%;
+    --orange-800: 30 80% 16%;
+    --orange-900: 30 75% 10%;
+
+    /* Gray scale (neutral with warm tint) */
+    --gray-50: 30 20% 98%;
+    --gray-100: 30 15% 94%;
+    --gray-200: 30 12% 88%;
+    --gray-300: 30 10% 78%;
+    --gray-400: 30 8% 60%;
+    --gray-500: 30 6% 45%;
+    --gray-600: 30 8% 35%;
+    --gray-700: 30 10% 25%;
+    --gray-800: 30 12% 15%;
+    --gray-900: 30 15% 8%;
+
+    /* Status colors - warm and clear */
+    --status-completed: 152 100% 20%;     /* Forest green */
+    --status-completed-bg: 152 100% 20% / 0.1;
+    --status-processing: 12 45% 49%;      /* Terracotta */
+    --status-processing-bg: 12 45% 49% / 0.1;
+    --status-pending: 40 60% 58%;         /* Amber */
+    --status-pending-bg: 40 60% 58% / 0.1;
+    --status-failed: 6 92% 44%;           /* Red */
+    --status-failed-bg: 6 92% 44% / 0.1;
+    --status-cancelled: 30 6% 45%;        /* Gray */
+    --status-cancelled-bg: 30 6% 45% / 0.08;
+
+    /* Button specific tokens */
+    --button-bg: 36 28% 94%;              /* #f5f2ec */
+    --button-hover: 40 20% 90%;           /* #e7e3d6 */
+    --button-foreground: 0 0% 23%;        /* #3b3b3b */
+    --button-primary-bg: 36 28% 94%;
+    --button-primary-foreground: 6 92% 44%;
+    --button-secondary-bg: 30 100% 95%;   /* #fff0e5 */
+    --button-secondary-foreground: 12 45% 49%;
+  }
+
+  /* Dark mode */
+  .dark {
+    --background: 30 15% 8%;
+    --foreground: 36 20% 92%;
+    --card: 30 12% 12%;
+    --card-foreground: 36 20% 92%;
+    --popover: 30 12% 12%;
+    --popover-foreground: 36 20% 92%;
+    --primary: 12 50% 55%;              /* Brighter terracotta for dark */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 55% 62%;            /* Brighter amber */
+    --secondary-foreground: 30 15% 8%;
+    --muted: 30 12% 18%;
+    --muted-foreground: 36 15% 55%;
+    --accent: 40 55% 62%;
+    --accent-foreground: 30 15% 8%;
+    --destructive: 6 80% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 152 70% 40%;
+    --success-foreground: 0 0% 100%;
+    --warning: 30 80% 50%;
+    --warning-foreground: 0 0% 0%;
+    --info: 210 70% 55%;
+    --info-foreground: 0 0% 100%;
+    --border: 30 12% 22%;
+    --input: 30 12% 15%;
+    --ring: 12 50% 55%;
+    --ring-offset: 30 15% 8%;
+
+    /* Gradient - brighter for dark */
+    --gradient-start: 12 50% 55%;
+    --gradient-end: 40 55% 62%;
+
+    /* Shadows - more subtle in dark mode */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.15);
+    --shadow-card: 0 2px 5px -1px rgb(0 0 0 / 0.25), 0 1px 3px -1px rgb(0 0 0 / 0.15);
+    --shadow-elevated: 0 10px 15px -3px rgb(0 0 0 / 0.35), 0 4px 6px -4px rgb(0 0 0 / 0.25);
+
+    /* Chart colors - brighter for dark mode */
+    --chart-1: 12 50% 55%;
+    --chart-2: 40 55% 62%;
+    --chart-3: 210 55% 60%;
+    --chart-4: 150 45% 50%;
+    --chart-5: 30 65% 65%;
+
+    /* Button tokens - dark mode */
+    --button-bg: 30 12% 15%;
+    --button-hover: 30 12% 20%;
+    --button-foreground: 36 20% 92%;
+    --button-primary-bg: 30 12% 15%;
+    --button-primary-foreground: 12 50% 55%;
+    --button-secondary-bg: 12 30% 15%;
+    --button-secondary-foreground: 12 50% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
+    letter-spacing: -0.003em;
+  }
+}

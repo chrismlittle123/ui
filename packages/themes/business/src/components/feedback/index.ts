@@ -11,3 +11,16 @@ export {
   ToastClose,
   ToastAction,
 } from "./toast";
+export {
+  ConfirmDialog,
+  ConfirmDialogPortal,
+  ConfirmDialogOverlay,
+  ConfirmDialogTrigger,
+  ConfirmDialogContent,
+  ConfirmDialogHeader,
+  ConfirmDialogFooter,
+  ConfirmDialogTitle,
+  ConfirmDialogDescription,
+  ConfirmDialogAction,
+  ConfirmDialogCancel,
+} from "./confirm-dialog";

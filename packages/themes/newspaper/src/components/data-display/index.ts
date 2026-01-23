@@ -10,3 +10,6 @@ export {
   TableCell,
   TableCaption,
 } from "./table";
+export { AuthorBadge, type AuthorBadgeProps, type AuthorInfo } from "./author-badge";
+export { CodeBlock, type CodeBlockProps } from "./code-block";
+export { TimelineStep, type TimelineStepProps } from "./timeline-step";

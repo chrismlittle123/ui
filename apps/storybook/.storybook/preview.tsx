@@ -1,8 +1,6 @@
 import type { Preview } from "@storybook/react";
 import { useEffect } from "react";
 
-// Import base Tailwind and component styles
-import "@chrislittle/theme/styles/globals.css";
 // Import theme variable overrides (scoped by data-theme attribute)
 import "../styles/themes.css";
 import "../styles/globals.css";
@@ -26,6 +24,7 @@ const preview: Preview = {
         items: [
           { value: "business", title: "Business (Stripe)" },
           { value: "newspaper", title: "Newspaper (Editorial)" },
+          { value: "finchly", title: "Finchly (Warm Terracotta)" },
         ],
         dynamicTitle: true,
       },
