@@ -10,18 +10,19 @@
 @layer base {
   :root {
     /* Linear's dark theme: nearly black with subtle cool undertones */
-    --background: 0 0% 7%;           /* #121212 */
-    --foreground: 0 0% 85%;          /* Slightly brighter for better readability */
-    --card: 220 6% 10%;              /* #1b1c1d */
-    --card-foreground: 0 0% 85%;
-    --popover: 220 6% 10%;
-    --popover-foreground: 0 0% 85%;
+    /* Surface hierarchy: background < card < secondary < muted */
+    --background: 0 0% 6%;           /* #0f0f0f - deepest layer */
+    --foreground: 0 0% 88%;          /* Slightly brighter for better readability */
+    --card: 220 6% 11%;              /* #1a1b1d - elevated surface */
+    --card-foreground: 0 0% 88%;
+    --popover: 220 6% 13%;           /* Popovers slightly more elevated */
+    --popover-foreground: 0 0% 88%;
     --primary: 245 58% 72%;          /* Brighter lavender for primary actions */
     --primary-foreground: 0 0% 100%;
-    --secondary: 220 6% 15%;         /* #222326 */
-    --secondary-foreground: 0 0% 75%;
-    --muted: 220 6% 15%;
-    --muted-foreground: 0 0% 50%;
+    --secondary: 220 6% 16%;         /* #252628 - interactive backgrounds */
+    --secondary-foreground: 0 0% 78%;
+    --muted: 220 6% 20%;             /* #303134 - most elevated muted surface */
+    --muted-foreground: 0 0% 55%;
     --accent: 190 75% 50%;           /* Cyan/teal - Linear's secondary accent */
     --accent-foreground: 0 0% 100%;
     --destructive: 0 72% 55%;
@@ -32,10 +33,10 @@
     --warning-foreground: 0 0% 0%;
     --info: 200 80% 55%;             /* Blue for informational */
     --info-foreground: 0 0% 100%;
-    --border: 220 6% 20%;
-    --input: 220 6% 12%;             /* #171717 - dark inputs */
+    --border: 220 6% 22%;            /* Slightly more visible borders */
+    --input: 220 6% 11%;             /* Matches card for inputs */
     --ring: 245 58% 72%;
-    --ring-offset: 0 0% 7%;          /* Matches background for focus rings */
+    --ring-offset: 0 0% 6%;          /* Matches background for focus rings */
     --radius: 0.375rem;              /* Linear uses subtle rounding */
 
     /* Chart colors for data visualization */

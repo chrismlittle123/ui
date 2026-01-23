@@ -5,18 +5,19 @@
    Dark only - minimal, muted, power-user focused
    ============================================ */
 [data-theme="graphite"] {
-  --background: 0 0% 7%;
-  --foreground: 0 0% 85%;
-  --card: 220 6% 10%;
-  --card-foreground: 0 0% 85%;
-  --popover: 220 6% 10%;
-  --popover-foreground: 0 0% 85%;
+  /* Surface hierarchy: background < card < secondary < muted */
+  --background: 0 0% 6%;
+  --foreground: 0 0% 88%;
+  --card: 220 6% 11%;
+  --card-foreground: 0 0% 88%;
+  --popover: 220 6% 13%;
+  --popover-foreground: 0 0% 88%;
   --primary: 245 58% 72%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 220 6% 15%;
-  --secondary-foreground: 0 0% 75%;
-  --muted: 220 6% 15%;
-  --muted-foreground: 0 0% 50%;
+  --secondary: 220 6% 16%;
+  --secondary-foreground: 0 0% 78%;
+  --muted: 220 6% 20%;
+  --muted-foreground: 0 0% 55%;
   --accent: 190 75% 50%;
   --accent-foreground: 0 0% 100%;
   --destructive: 0 72% 55%;
@@ -27,10 +28,10 @@
   --warning-foreground: 0 0% 0%;
   --info: 200 80% 55%;
   --info-foreground: 0 0% 100%;
-  --border: 220 6% 20%;
-  --input: 220 6% 12%;
+  --border: 220 6% 22%;
+  --input: 220 6% 11%;
   --ring: 245 58% 72%;
-  --ring-offset: 0 0% 7%;
+  --ring-offset: 0 0% 6%;
   --radius: 0.375rem;
 
   /* Chart colors */
@@ -195,36 +196,36 @@
   line-height: 1.5;
 }
 
-/* Newspaper Dark */
+/* Newspaper Dark - warm and cozy like a candlelit study */
 [data-theme="newspaper"].dark,
 [data-theme="newspaper"] .dark {
-  --background: 350 12% 8%;
-  --foreground: 30 18% 88%;
-  --card: 350 10% 11%;
-  --card-foreground: 30 18% 88%;
-  --popover: 350 10% 11%;
-  --popover-foreground: 30 18% 88%;
-  --primary: 345 30% 58%;
-  --primary-foreground: 350 12% 10%;
-  --secondary: 350 10% 15%;
-  --secondary-foreground: 30 18% 85%;
-  --muted: 350 10% 15%;
-  --muted-foreground: 350 8% 55%;
-  --accent: 145 20% 50%;
-  --accent-foreground: 350 12% 10%;
-  --destructive: 355 40% 55%;
-  --destructive-foreground: 30 18% 95%;
-  --success: 145 22% 50%;
-  --success-foreground: 350 12% 10%;
-  --warning: 35 40% 55%;
-  --warning-foreground: 350 12% 10%;
-  --info: 200 25% 55%;
-  --info-foreground: 350 12% 10%;
-  --link: 345 28% 62%;
-  --border: 350 10% 18%;
-  --input: 350 10% 11%;
-  --ring: 345 30% 58%;
-  --ring-offset: 350 12% 8%;
+  --background: 25 18% 8%;
+  --foreground: 35 20% 90%;
+  --card: 25 15% 12%;
+  --card-foreground: 35 20% 90%;
+  --popover: 25 15% 14%;
+  --popover-foreground: 35 20% 90%;
+  --primary: 345 32% 60%;
+  --primary-foreground: 25 18% 8%;
+  --secondary: 25 12% 16%;
+  --secondary-foreground: 35 18% 85%;
+  --muted: 25 10% 20%;
+  --muted-foreground: 30 12% 55%;
+  --accent: 145 22% 52%;
+  --accent-foreground: 25 18% 8%;
+  --destructive: 355 42% 55%;
+  --destructive-foreground: 35 20% 95%;
+  --success: 145 24% 50%;
+  --success-foreground: 25 18% 8%;
+  --warning: 38 45% 55%;
+  --warning-foreground: 25 18% 8%;
+  --info: 200 28% 55%;
+  --info-foreground: 25 18% 8%;
+  --link: 345 30% 65%;
+  --border: 25 12% 20%;
+  --input: 25 15% 12%;
+  --ring: 345 32% 60%;
+  --ring-offset: 25 18% 8%;
 
   /* Chart colors - burgundy for dark mode */
   --chart-1: 345 30% 55%;
@@ -248,13 +249,13 @@
   --status-cancelled-bg: 350 8% 50% / 0.1;
 
   /* Extended burgundy palette - dark mode */
-  --burgundy: 345 30% 55%;
-  --burgundy-light: 345 25% 68%;
-  --wine: 350 35% 48%;
-  --wine-light: 350 30% 60%;
-  --rose: 355 28% 62%;
-  --sage: 145 20% 50%;
-  --sage-light: 145 18% 62%;
+  --burgundy: 345 32% 58%;
+  --burgundy-light: 345 28% 70%;
+  --wine: 350 35% 52%;
+  --wine-light: 350 30% 62%;
+  --rose: 355 30% 65%;
+  --sage: 145 22% 52%;
+  --sage-light: 145 20% 65%;
   --ochre: 35 40% 55%;
   --ochre-light: 35 35% 68%;
   --sand: 35 20% 65%;

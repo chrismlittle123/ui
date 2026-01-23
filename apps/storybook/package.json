@@ -14,15 +14,16 @@
     "clean": "rm -rf storybook-static storybook-static-*"
   },
   "dependencies": {
+    "@chrislittle/theme-business": "workspace:*",
     "@chrislittle/theme-core": "workspace:*",
     "@chrislittle/theme-graphite": "workspace:*",
     "@chrislittle/theme-newspaper": "workspace:*",
-    "@chrislittle/theme-business": "workspace:*",
     "@chrislittle/ui-primitives": "workspace:*",
     "react": "^18.3.0",
     "react-dom": "^18.3.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.57.0",
     "@storybook/addon-essentials": "^8.4.0",
     "@storybook/addon-interactions": "^8.4.0",
     "@storybook/addon-links": "^8.4.0",

@@ -68,35 +68,35 @@
     --olive-light: 80 18% 52%;
   }
 
-  /* Dark mode - warm and cozy with burgundy */
+  /* Dark mode - warm and cozy like a candlelit study */
   .dark {
-    --background: 350 12% 8%;            /* Warm charcoal with burgundy hint */
-    --foreground: 30 18% 88%;            /* Soft cream, not harsh white */
-    --card: 350 10% 11%;
-    --card-foreground: 30 18% 88%;
-    --popover: 350 10% 11%;
-    --popover-foreground: 30 18% 88%;
-    --primary: 345 30% 58%;              /* Lighter burgundy */
-    --primary-foreground: 350 12% 10%;
-    --secondary: 350 10% 15%;
-    --secondary-foreground: 30 18% 85%;
-    --muted: 350 10% 15%;
-    --muted-foreground: 350 8% 55%;
-    --accent: 145 20% 50%;               /* Lighter sage */
-    --accent-foreground: 350 12% 10%;
-    --destructive: 355 40% 55%;
-    --destructive-foreground: 30 18% 95%;
-    --success: 145 22% 50%;
-    --success-foreground: 350 12% 10%;
-    --warning: 35 40% 55%;
-    --warning-foreground: 350 12% 10%;
-    --info: 200 25% 55%;
-    --info-foreground: 350 12% 10%;
-    --link: 345 28% 62%;                 /* Softer burgundy link */
-    --border: 350 10% 18%;
-    --input: 350 10% 11%;
-    --ring: 345 30% 58%;
-    --ring-offset: 350 12% 8%;
+    --background: 25 18% 8%;             /* Warm sepia-brown charcoal */
+    --foreground: 35 20% 90%;            /* Warm cream text */
+    --card: 25 15% 12%;                  /* Warm brown elevated surface */
+    --card-foreground: 35 20% 90%;
+    --popover: 25 15% 14%;
+    --popover-foreground: 35 20% 90%;
+    --primary: 345 32% 60%;              /* Lighter burgundy */
+    --primary-foreground: 25 18% 8%;
+    --secondary: 25 12% 16%;             /* Warm brown secondary */
+    --secondary-foreground: 35 18% 85%;
+    --muted: 25 10% 20%;                 /* Warm muted surface */
+    --muted-foreground: 30 12% 55%;
+    --accent: 145 22% 52%;               /* Lighter sage */
+    --accent-foreground: 25 18% 8%;
+    --destructive: 355 42% 55%;
+    --destructive-foreground: 35 20% 95%;
+    --success: 145 24% 50%;
+    --success-foreground: 25 18% 8%;
+    --warning: 38 45% 55%;
+    --warning-foreground: 25 18% 8%;
+    --info: 200 28% 55%;
+    --info-foreground: 25 18% 8%;
+    --link: 345 30% 65%;                 /* Softer burgundy link */
+    --border: 25 12% 20%;
+    --input: 25 15% 12%;
+    --ring: 345 32% 60%;
+    --ring-offset: 25 18% 8%;
 
     /* Chart colors - burgundy palette for dark mode */
     --chart-1: 345 30% 55%;
@@ -106,26 +106,26 @@
     --chart-5: 280 20% 55%;
 
     /* Extended burgundy palette - dark mode */
-    --burgundy: 345 30% 55%;
-    --burgundy-light: 345 25% 68%;
-    --burgundy-dark: 345 35% 42%;
-    --wine: 350 35% 48%;
-    --wine-light: 350 30% 60%;
-    --rose: 355 28% 62%;
-    --rose-light: 355 22% 72%;
-    --sage: 145 20% 50%;
-    --sage-light: 145 18% 62%;
-    --sage-dark: 145 22% 38%;
-    --ochre: 35 40% 55%;
-    --ochre-light: 35 35% 68%;
-    --sand: 35 20% 65%;
-    --sand-light: 35 16% 75%;
-    --slate: 200 25% 55%;
-    --slate-light: 200 20% 65%;
-    --plum: 280 20% 55%;
-    --plum-light: 280 18% 65%;
-    --olive: 80 20% 48%;
-    --olive-light: 80 16% 58%;
+    --burgundy: 345 32% 58%;
+    --burgundy-light: 345 28% 70%;
+    --burgundy-dark: 345 35% 45%;
+    --wine: 350 35% 52%;
+    --wine-light: 350 30% 62%;
+    --rose: 355 30% 65%;
+    --rose-light: 355 25% 75%;
+    --sage: 145 22% 52%;
+    --sage-light: 145 20% 65%;
+    --sage-dark: 145 24% 40%;
+    --ochre: 38 45% 58%;
+    --ochre-light: 38 40% 70%;
+    --sand: 35 25% 68%;
+    --sand-light: 35 20% 78%;
+    --slate: 200 28% 58%;
+    --slate-light: 200 22% 68%;
+    --plum: 280 22% 58%;
+    --plum-light: 280 20% 68%;
+    --olive: 80 22% 52%;
+    --olive-light: 80 18% 62%;
   }
 }
 
