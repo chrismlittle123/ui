@@ -4,85 +4,90 @@
 
 /* ============================================
    THEME: GRAPHITE (Linear-inspired)
-   Dark, minimal, sleek, power-user focused
+   Dark, minimal, muted, power-user focused
+   Based on: https://linear.app/brand, https://linear.style/
    ============================================ */
 @layer base {
   :root,
   .theme-graphite {
-    --background: 240 10% 6%;
-    --foreground: 0 0% 95%;
-    --card: 240 10% 9%;
-    --card-foreground: 0 0% 95%;
-    --popover: 240 10% 9%;
-    --popover-foreground: 0 0% 95%;
-    --primary: 262 83% 58%;
+    /* Linear's dark theme: nearly black with subtle cool undertones */
+    --background: 0 0% 7%;           /* #121212 */
+    --foreground: 0 0% 80%;          /* #cccccc - NOT pure white */
+    --card: 220 6% 10%;              /* #1b1c1d */
+    --card-foreground: 0 0% 80%;
+    --popover: 220 6% 10%;
+    --popover-foreground: 0 0% 80%;
+    --primary: 235 35% 67%;          /* #848CD0 - muted lavender, NOT saturated purple */
     --primary-foreground: 0 0% 100%;
-    --secondary: 240 5% 15%;
-    --secondary-foreground: 0 0% 90%;
-    --muted: 240 5% 15%;
-    --muted-foreground: 240 5% 55%;
-    --accent: 262 83% 58%;
+    --secondary: 220 6% 15%;         /* #222326 */
+    --secondary-foreground: 0 0% 75%;
+    --muted: 220 6% 15%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 235 35% 67%;           /* Same muted lavender */
     --accent-foreground: 0 0% 100%;
-    --destructive: 0 72% 51%;
+    --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
-    --border: 240 5% 18%;
-    --input: 240 5% 18%;
-    --ring: 262 83% 58%;
-    --radius: 0.5rem;
+    --border: 220 6% 20%;
+    --input: 220 6% 12%;             /* #171717 - dark inputs */
+    --ring: 235 35% 67%;
+    --radius: 0.375rem;              /* Linear uses subtle rounding */
   }
 
   /* ============================================
-     THEME: PAPER (Tldraw-inspired)
-     Warm, playful, hand-drawn, creative
+     THEME: PAPER (Tldraw/Finchly-inspired)
+     Warm, clean, soft, friendly, minimal
      ============================================ */
   .theme-paper {
-    --background: 43 30% 96%;
-    --foreground: 20 15% 20%;
-    --card: 40 40% 98%;
-    --card-foreground: 20 15% 20%;
-    --popover: 40 40% 99%;
-    --popover-foreground: 20 15% 20%;
-    --primary: 221 83% 53%;
+    /* Warm off-white background with subtle cream undertone */
+    --background: 40 20% 98%;        /* #FAF9F7 - warm off-white */
+    --foreground: 0 0% 15%;          /* Dark text */
+    --card: 0 0% 100%;               /* Pure white cards */
+    --card-foreground: 0 0% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+    --primary: 0 0% 10%;             /* Dark/black buttons */
     --primary-foreground: 0 0% 100%;
-    --secondary: 43 30% 91%;
-    --secondary-foreground: 20 15% 25%;
-    --muted: 43 25% 90%;
-    --muted-foreground: 20 10% 45%;
-    --accent: 43 96% 56%;
-    --accent-foreground: 20 15% 15%;
+    --secondary: 40 10% 95%;         /* Warm light gray */
+    --secondary-foreground: 0 0% 15%;
+    --muted: 40 10% 95%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 174 72% 40%;           /* Teal/cyan accent */
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 35 20% 82%;
-    --input: 35 20% 85%;
-    --ring: 221 83% 53%;
-    --radius: 1rem;
+    --border: 40 10% 90%;            /* Very soft warm gray borders */
+    --input: 0 0% 100%;
+    --ring: 174 72% 40%;             /* Teal ring */
+    --radius: 0.5rem;                /* Rounded but not too much */
   }
 
   /* ============================================
      THEME: BUSINESS (Stripe-inspired)
-     Clean, professional, trustworthy, polished
+     Professional, trustworthy, polished
+     Based on: https://stripe.com, https://mobbin.com/colors/brand/stripe
      ============================================ */
   .theme-business {
-    --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    /* Stripe: Blue-gray tinted backgrounds, signature purple */
+    --background: 210 20% 98%;       /* #F6F9FC - Stripe's "Black Squeeze" */
+    --foreground: 226 57% 15%;       /* #0A2540 - Stripe's "Downriver" */
+    --card: 0 0% 100%;               /* Pure white cards */
+    --card-foreground: 228 14% 22%;  /* #30313d - Stripe's text color */
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
-    --primary: 250 87% 60%;
+    --popover-foreground: 228 14% 22%;
+    --primary: 243 100% 68%;         /* #635BFF - Stripe's signature purple */
     --primary-foreground: 0 0% 100%;
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 222 47% 11%;
-    --muted: 220 14% 96%;
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 228 14% 22%;
+    --muted: 210 20% 96%;
     --muted-foreground: 220 9% 46%;
-    --accent: 250 87% 60%;
+    --accent: 243 100% 68%;          /* Stripe purple */
     --accent-foreground: 0 0% 100%;
-    --destructive: 0 84% 60%;
+    --destructive: 350 89% 50%;      /* #df1b41 - Stripe's danger */
     --destructive-foreground: 0 0% 100%;
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 250 87% 60%;
-    --radius: 0.375rem;
+    --border: 213 20% 91%;           /* Blue-gray tinted border */
+    --input: 213 20% 91%;
+    --ring: 243 100% 68%;
+    --radius: 0.25rem;               /* Stripe uses small radius (4px) */
   }
 }
 
@@ -99,131 +104,200 @@
    THEME-SPECIFIC STYLING OVERRIDES
    ============================================ */
 
-/* GRAPHITE: Tight, professional typography */
+/* GRAPHITE: Linear-style typography and colors */
 .theme-graphite {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   letter-spacing: -0.011em;
-
-  /* Subtle, minimal shadows */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
-  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.4), 0 1px 2px -1px rgb(0 0 0 / 0.4);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.4);
 }
 
-/* Graphite: Dark cards */
+/* Graphite: Explicit dark backgrounds */
 .theme-graphite .bg-card {
-  background-color: hsl(240 10% 9%) !important;
+  background-color: #1b1c1d !important;
 }
 
 .theme-graphite .bg-background {
-  background-color: hsl(240 10% 6%) !important;
+  background-color: #121212 !important;
 }
 
 .theme-graphite .bg-muted {
-  background-color: hsl(240 5% 15%) !important;
+  background-color: #222326 !important;
 }
 
 .theme-graphite .bg-muted\/30 {
-  background-color: hsl(240 5% 15% / 0.3) !important;
+  background-color: rgba(34, 35, 38, 0.3) !important;
 }
 
-.theme-graphite .rounded-xl {
-  @apply rounded-lg;
+.theme-graphite .bg-secondary {
+  background-color: #222326 !important;
 }
 
-/* PAPER: Friendly, rounded, sketch-like */
+.theme-graphite .text-foreground {
+  color: #cccccc !important;
+}
+
+.theme-graphite .text-muted-foreground {
+  color: #737373 !important;
+}
+
+.theme-graphite .border {
+  border-color: #2a2b2e !important;
+}
+
+.theme-graphite .border-b {
+  border-color: #2a2b2e !important;
+}
+
+.theme-graphite .border-input {
+  border-color: #2a2b2e !important;
+}
+
+/* Graphite: Muted purple buttons */
+.theme-graphite .bg-primary {
+  background-color: #848CD0 !important;
+}
+
+.theme-graphite .text-primary {
+  color: #848CD0 !important;
+}
+
+/* PAPER: Warm, clean, minimal like Finchly */
 .theme-paper {
-  font-family: "Nunito", "Quicksand", -apple-system, BlinkMacSystemFont, sans-serif;
-  letter-spacing: 0.01em;
-
-  /* Soft, warm shadows */
-  --shadow-sm: 0 1px 3px 0 rgb(120 100 80 / 0.1);
-  --shadow: 0 2px 8px 0 rgb(120 100 80 / 0.12), 0 1px 3px -1px rgb(120 100 80 / 0.1);
-  --shadow-md: 0 6px 16px -2px rgb(120 100 80 / 0.15), 0 3px 6px -3px rgb(120 100 80 / 0.1);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  letter-spacing: -0.01em;
 }
 
-/* Paper: Warm cream cards */
-.theme-paper .bg-card {
-  background-color: hsl(45 50% 97%) !important;
-}
-
+/* Paper: Warm off-white background */
 .theme-paper .bg-background {
-  background-color: hsl(43 30% 94%) !important;
+  background-color: #faf9f7 !important;
+}
+
+/* Paper: Pure white cards with very subtle shadow */
+.theme-paper .bg-card {
+  background-color: #ffffff !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.03) !important;
 }
 
 .theme-paper .bg-muted {
-  background-color: hsl(43 25% 90%) !important;
+  background-color: #f5f4f2 !important;
 }
 
 .theme-paper .bg-muted\/30 {
-  background-color: hsl(43 25% 90% / 0.3) !important;
+  background-color: rgba(245, 244, 242, 0.5) !important;
 }
 
+.theme-paper .bg-secondary {
+  background-color: #f5f4f2 !important;
+}
+
+/* Paper: Very soft borders */
 .theme-paper .border {
-  border-color: hsl(35 25% 80%) !important;
+  border-color: #e8e6e3 !important;
 }
 
-/* Paper: Extra rounded corners */
+.theme-paper .border-b {
+  border-color: #e8e6e3 !important;
+}
+
+.theme-paper .border-input {
+  border-color: #e0dedb !important;
+}
+
+/* Paper: Dark/black primary buttons */
+.theme-paper .bg-primary {
+  background-color: #1a1a1a !important;
+}
+
+.theme-paper .text-primary {
+  color: #1a1a1a !important;
+}
+
+/* Paper: Teal accent for links */
+.theme-paper .text-accent {
+  color: #0d9488 !important;
+}
+
+/* Paper: Soft rounded corners */
 .theme-paper .rounded-md {
-  border-radius: 0.75rem;
-}
-
-.theme-paper .rounded-lg {
-  border-radius: 1rem;
-}
-
-.theme-paper .rounded-xl {
-  border-radius: 1.25rem;
-}
-
-/* Paper: Slightly thicker borders for hand-drawn feel */
-.theme-paper [class*="border"] {
-  border-width: 1.5px;
-}
-
-/* BUSINESS: Clean, precise, professional */
-.theme-business {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
-  letter-spacing: -0.006em;
-
-  /* Crisp, layered shadows (Stripe-style) */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-}
-
-/* Business: Clean white cards on subtle gray background */
-.theme-business .bg-card {
-  background-color: hsl(0 0% 100%) !important;
-}
-
-.theme-business .bg-background {
-  background-color: hsl(220 14% 96%) !important;
-}
-
-.theme-business .bg-muted {
-  background-color: hsl(220 14% 96%) !important;
-}
-
-.theme-business .border {
-  border-color: hsl(220 13% 90%) !important;
-}
-
-/* Business: Tighter radius */
-.theme-business .rounded-lg {
-  border-radius: 0.5rem;
-}
-
-.theme-business .rounded-xl {
-  border-radius: 0.625rem;
-}
-
-.theme-business .rounded-md {
   border-radius: 0.375rem;
 }
 
-/* Business: Refined borders */
-.theme-business [class*="border"] {
-  border-color: hsl(220 13% 91%);
+.theme-paper .rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.theme-paper .rounded-xl {
+  border-radius: 0.75rem;
+}
+
+/* Paper: Very subtle shadows */
+.theme-paper [class*="shadow"] {
+  --tw-shadow: 0 1px 2px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+/* Paper: Pill-shaped badges */
+.theme-paper .rounded-full {
+  border-radius: 9999px;
+}
+
+/* BUSINESS: Stripe-style professional and polished */
+.theme-business {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
+  letter-spacing: -0.003em;
+}
+
+/* Business: Blue-gray tinted background, white cards */
+.theme-business .bg-card {
+  background-color: #ffffff !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06) !important;
+}
+
+.theme-business .bg-background {
+  background-color: #f6f9fc !important;
+}
+
+.theme-business .bg-muted {
+  background-color: #f0f3f6 !important;
+}
+
+.theme-business .bg-muted\/30 {
+  background-color: rgba(240, 243, 246, 0.3) !important;
+}
+
+.theme-business .border {
+  border-color: #e3e8ee !important;
+}
+
+.theme-business .border-input {
+  border-color: #e3e8ee !important;
+}
+
+/* Business: Stripe purple buttons */
+.theme-business .bg-primary {
+  background-color: #635BFF !important;
+}
+
+.theme-business .text-primary {
+  color: #635BFF !important;
+}
+
+/* Business: Stripe's dark blue-gray text */
+.theme-business .text-foreground {
+  color: #0a2540 !important;
+}
+
+.theme-business .text-muted-foreground {
+  color: #596b7d !important;
+}
+
+/* Business: Tight radius like Stripe */
+.theme-business .rounded-md {
+  border-radius: 0.25rem;
+}
+
+.theme-business .rounded-lg {
+  border-radius: 0.375rem;
+}
+
+.theme-business .rounded-xl {
+  border-radius: 0.5rem;
 }
