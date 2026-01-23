@@ -56,6 +56,74 @@ Each theme package exports:
 @yourorg/theme-business   # Extends core with Stripe aesthetic
 ```
 
+### Component Strategy: Flat with Categories
+
+Components are organized into intuitive categories, but flat within each category — no atoms/molecules/organisms hierarchy.
+
+```
+core/
+├── components/
+│   ├── actions/           # User interactions
+│   │   ├── button.tsx
+│   │   └── dropdown-menu.tsx
+│   │
+│   ├── forms/             # Form inputs
+│   │   ├── checkbox.tsx
+│   │   ├── input.tsx
+│   │   ├── label.tsx
+│   │   ├── select.tsx
+│   │   ├── switch.tsx
+│   │   └── textarea.tsx
+│   │
+│   ├── layout/            # Structure & containers
+│   │   ├── card.tsx
+│   │   ├── separator.tsx
+│   │   └── accordion.tsx
+│   │
+│   ├── feedback/          # User feedback
+│   │   ├── alert.tsx
+│   │   ├── skeleton.tsx
+│   │   └── toast.tsx
+│   │
+│   ├── overlays/          # Floating UI
+│   │   ├── dialog.tsx
+│   │   ├── popover.tsx
+│   │   └── tooltip.tsx
+│   │
+│   ├── navigation/        # Navigation elements
+│   │   └── tabs.tsx
+│   │
+│   └── data-display/      # Showing data
+│       ├── avatar.tsx
+│       ├── badge.tsx
+│       └── table.tsx
+│
+├── utils/
+│   ├── cn.ts
+│   └── theme.ts
+└── types/
+    └── index.ts
+```
+
+**Rationale:**
+- Categories make discovery intuitive ("I need a form thing" → `/forms`)
+- Flat within categories — no nested hierarchies
+- Still simple imports: `import { Button, Card, Input } from '@yourorg/theme-core'`
+- Avoids atom/molecule debates while providing organization
+- Scales well as component count grows
+
+**Component list by category:**
+
+| Category | Components |
+|----------|------------|
+| **actions** | Button, Dropdown Menu |
+| **forms** | Checkbox, Input, Label, Select, Switch, Textarea |
+| **layout** | Accordion, Card, Separator |
+| **feedback** | Alert, Skeleton, Toast |
+| **overlays** | Dialog, Popover, Tooltip |
+| **navigation** | Tabs |
+| **data-display** | Avatar, Badge, Table |
+
 ### Theme Details
 
 #### Graphite (Linear-inspired)
