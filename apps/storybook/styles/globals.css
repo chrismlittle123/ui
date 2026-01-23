@@ -110,6 +110,23 @@
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.4);
 }
 
+/* Graphite: Dark cards */
+.theme-graphite .bg-card {
+  background-color: hsl(240 10% 9%) !important;
+}
+
+.theme-graphite .bg-background {
+  background-color: hsl(240 10% 6%) !important;
+}
+
+.theme-graphite .bg-muted {
+  background-color: hsl(240 5% 15%) !important;
+}
+
+.theme-graphite .bg-muted\/30 {
+  background-color: hsl(240 5% 15% / 0.3) !important;
+}
+
 .theme-graphite .rounded-xl {
   @apply rounded-lg;
 }
@@ -123,6 +140,27 @@
   --shadow-sm: 0 1px 3px 0 rgb(120 100 80 / 0.1);
   --shadow: 0 2px 8px 0 rgb(120 100 80 / 0.12), 0 1px 3px -1px rgb(120 100 80 / 0.1);
   --shadow-md: 0 6px 16px -2px rgb(120 100 80 / 0.15), 0 3px 6px -3px rgb(120 100 80 / 0.1);
+}
+
+/* Paper: Warm cream cards */
+.theme-paper .bg-card {
+  background-color: hsl(45 50% 97%) !important;
+}
+
+.theme-paper .bg-background {
+  background-color: hsl(43 30% 94%) !important;
+}
+
+.theme-paper .bg-muted {
+  background-color: hsl(43 25% 90%) !important;
+}
+
+.theme-paper .bg-muted\/30 {
+  background-color: hsl(43 25% 90% / 0.3) !important;
+}
+
+.theme-paper .border {
+  border-color: hsl(35 25% 80%) !important;
 }
 
 /* Paper: Extra rounded corners */
@@ -155,6 +193,23 @@
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
+/* Business: Clean white cards on subtle gray background */
+.theme-business .bg-card {
+  background-color: hsl(0 0% 100%) !important;
+}
+
+.theme-business .bg-background {
+  background-color: hsl(220 14% 96%) !important;
+}
+
+.theme-business .bg-muted {
+  background-color: hsl(220 14% 96%) !important;
+}
+
+.theme-business .border {
+  border-color: hsl(220 13% 90%) !important;
+}
+
 /* Business: Tighter radius */
 .theme-business .rounded-lg {
   border-radius: 0.5rem;
@@ -162,6 +217,10 @@
 
 .theme-business .rounded-xl {
   border-radius: 0.625rem;
+}
+
+.theme-business .rounded-md {
+  border-radius: 0.375rem;
 }
 
 /* Business: Refined borders */
