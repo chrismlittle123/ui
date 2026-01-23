@@ -90,22 +90,22 @@
   letter-spacing: -0.01em;
 }
 
-/* Business Dark - polished dark mode with clear surface hierarchy */
+/* Business Dark - polished dark mode with strong surface hierarchy */
 [data-theme="business"].dark,
 [data-theme="business"] .dark {
-  /* Surface hierarchy: background < card < secondary < muted */
-  --background: 222 47% 7%;
-  --foreground: 210 40% 96%;
-  --card: 222 40% 11%;
-  --card-foreground: 210 40% 96%;
-  --popover: 222 40% 13%;
-  --popover-foreground: 210 40% 96%;
+  /* Surface hierarchy: background (darkest) < card < secondary < muted (lightest) */
+  --background: 225 45% 5%;
+  --foreground: 210 40% 98%;
+  --card: 222 35% 12%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222 32% 14%;
+  --popover-foreground: 210 40% 98%;
   --primary: 243 100% 72%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 222 35% 16%;
-  --secondary-foreground: 210 40% 92%;
-  --muted: 222 30% 20%;
-  --muted-foreground: 210 25% 55%;
+  --secondary: 222 28% 17%;
+  --secondary-foreground: 210 35% 90%;
+  --muted: 222 22% 22%;
+  --muted-foreground: 215 20% 65%;
   --accent: 172 66% 55%;
   --accent-foreground: 0 0% 100%;
   --destructive: 0 72% 55%;
@@ -116,20 +116,20 @@
   --warning-foreground: 0 0% 0%;
   --info: 210 80% 60%;
   --info-foreground: 0 0% 100%;
-  --border: 222 30% 22%;
-  --input: 222 40% 11%;
+  --border: 222 20% 28%;
+  --input: 222 32% 14%;
   --ring: 243 100% 72%;
-  --ring-offset: 222 47% 7%;
+  --ring-offset: 225 45% 5%;
 
   /* Gradient - brighter for dark */
   --gradient-start: 243 100% 72%;
   --gradient-end: 280 87% 70%;
 
   /* Shadow tokens - stronger for dark mode */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
-  --shadow-card: 0 2px 5px -1px rgb(0 0 0 / 0.4), 0 1px 3px -1px rgb(0 0 0 / 0.3);
-  --shadow-elevated: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.4);
-  --shadow-glow: 0 0 0 1px hsl(var(--primary) / 0.2), 0 0 12px 0 hsl(var(--primary) / 0.15);
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.4);
+  --shadow-card: 0 4px 8px -2px rgb(0 0 0 / 0.5), 0 2px 4px -1px rgb(0 0 0 / 0.4);
+  --shadow-elevated: 0 12px 20px -4px rgb(0 0 0 / 0.6), 0 6px 8px -4px rgb(0 0 0 / 0.5);
+  --shadow-glow: 0 0 0 1px hsl(var(--primary) / 0.3), 0 0 16px 0 hsl(var(--primary) / 0.2);
 
   /* Chart colors - brighter for dark mode */
   --chart-1: 243 100% 72%;

@@ -37,14 +37,34 @@ const DataTable = () => {
     { id: "ORD-007", customer: "Grace Kim", product: "Starter Plan", amount: "$29.00", status: "Completed", date: "2024-01-12" },
   ];
 
-  const getStatusBadge = (status: string) => {
-    const variants: Record<string, "default" | "secondary" | "destructive" | "outline"> = {
-      Completed: "default",
-      Processing: "secondary",
-      Pending: "outline",
-      Refunded: "destructive",
+  // Custom status badge component using theme status colors
+  const StatusBadge = ({ status }: { status: string }) => {
+    const statusKey = status.toLowerCase();
+    const statusMap: Record<string, string> = {
+      completed: "completed",
+      processing: "processing",
+      pending: "pending",
+      refunded: "refunded",
+      failed: "failed",
+      cancelled: "cancelled",
     };
-    return <Badge variant={variants[status] || "outline"}>{status}</Badge>;
+    const key = statusMap[statusKey] || "pending";
+
+    return (
+      <span
+        className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium transition-colors"
+        style={{
+          backgroundColor: `hsl(var(--status-${key}-bg))`,
+          color: `hsl(var(--status-${key}))`,
+        }}
+      >
+        {status}
+      </span>
+    );
+  };
+
+  const getStatusBadge = (status: string) => {
+    return <StatusBadge status={status} />;
   };
 
   return (
