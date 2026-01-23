@@ -3,12 +3,22 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "storybook dev -p 6006",
+    "dev": "STORYBOOK_THEME=graphite storybook dev -p 6006",
+    "dev:graphite": "STORYBOOK_THEME=graphite storybook dev -p 6006",
+    "dev:paper": "STORYBOOK_THEME=paper storybook dev -p 6007",
+    "dev:business": "STORYBOOK_THEME=business storybook dev -p 6008",
     "build": "storybook build",
-    "clean": "rm -rf storybook-static"
+    "build:graphite": "STORYBOOK_THEME=graphite storybook build -o storybook-static-graphite",
+    "build:paper": "STORYBOOK_THEME=paper storybook build -o storybook-static-paper",
+    "build:business": "STORYBOOK_THEME=business storybook build -o storybook-static-business",
+    "clean": "rm -rf storybook-static storybook-static-*"
   },
   "dependencies": {
     "@chrislittle/theme-core": "workspace:*",
+    "@chrislittle/theme-graphite": "workspace:*",
+    "@chrislittle/theme-paper": "workspace:*",
+    "@chrislittle/theme-business": "workspace:*",
+    "@chrislittle/ui-primitives": "workspace:*",
     "react": "^18.3.0",
     "react-dom": "^18.3.0"
   },

@@ -11,7 +11,7 @@ import {
   Label,
   Checkbox,
   Separator,
-} from "@chrislittle/theme-core";
+} from "@chrislittle/theme";
 
 const LoginPage = () => {
   return (

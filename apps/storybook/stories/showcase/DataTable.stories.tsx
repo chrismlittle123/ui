@@ -24,7 +24,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
   DropdownMenuSeparator,
-} from "@chrislittle/theme-core";
+} from "@chrislittle/theme";
 
 const DataTable = () => {
   const orders = [

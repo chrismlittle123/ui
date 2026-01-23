@@ -2,6 +2,14 @@ import type { StorybookConfig } from "@storybook/react-vite";
 import { mergeConfig } from "vite";
 import path from "path";
 
+const activeTheme = process.env.STORYBOOK_THEME || "graphite";
+
+const themePathMap: Record<string, string> = {
+  graphite: path.resolve(__dirname, "../../../packages/themes/graphite/src"),
+  paper: path.resolve(__dirname, "../../../packages/themes/paper/src"),
+  business: path.resolve(__dirname, "../../../packages/themes/business/src"),
+};
+
 const config: StorybookConfig = {
   stories: ["../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
@@ -21,9 +29,14 @@ const config: StorybookConfig = {
     return mergeConfig(config, {
       resolve: {
         alias: {
+          "@chrislittle/theme": themePathMap[activeTheme],
           "@chrislittle/theme-core": path.resolve(
             __dirname,
             "../../../packages/themes/core/src"
+          ),
+          "@chrislittle/ui-primitives": path.resolve(
+            __dirname,
+            "../../../packages/primitives/src"
           ),
         },
       },

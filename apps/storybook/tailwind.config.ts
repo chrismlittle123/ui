@@ -5,6 +5,9 @@ const config: Config = {
   content: [
     "./stories/**/*.{ts,tsx}",
     "../../packages/themes/core/src/**/*.{ts,tsx}",
+    "../../packages/themes/graphite/src/**/*.{ts,tsx}",
+    "../../packages/themes/paper/src/**/*.{ts,tsx}",
+    "../../packages/themes/business/src/**/*.{ts,tsx}",
   ],
   theme: {
     container: {

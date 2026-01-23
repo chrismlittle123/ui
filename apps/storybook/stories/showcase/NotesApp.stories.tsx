@@ -10,7 +10,7 @@ import {
   Separator,
   Avatar,
   AvatarFallback,
-} from "@chrislittle/theme-core";
+} from "@chrislittle/theme";
 
 const NotesApp = () => {
   const notes = [

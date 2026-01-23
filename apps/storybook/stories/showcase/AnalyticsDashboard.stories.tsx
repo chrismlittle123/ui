@@ -17,7 +17,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@chrislittle/theme-core";
+} from "@chrislittle/theme";
 
 const AnalyticsDashboard = () => {
   const stats = [

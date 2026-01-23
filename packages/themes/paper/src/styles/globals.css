@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   THEME: PAPER (Tldraw/Finchly-inspired)
+   Warm, clean, soft, friendly, minimal
+   ============================================ */
+@layer base {
+  :root {
+    /* Warm off-white background with subtle cream undertone */
+    --background: 40 20% 98%;        /* #FAF9F7 - warm off-white */
+    --foreground: 0 0% 15%;          /* Dark text */
+    --card: 0 0% 100%;               /* Pure white cards */
+    --card-foreground: 0 0% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+    --primary: 0 0% 10%;             /* Dark/black buttons */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 10% 95%;         /* Warm light gray */
+    --secondary-foreground: 0 0% 15%;
+    --muted: 40 10% 95%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 174 72% 40%;           /* Teal/cyan accent */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 40 10% 90%;            /* Very soft warm gray borders */
+    --input: 0 0% 100%;
+    --ring: 174 72% 40%;             /* Teal ring */
+    --radius: 0.5rem;                /* Rounded but not too much */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Georgia", "Times New Roman", "Times", serif;
+    letter-spacing: 0;
+  }
+
+  /* Typewriter-style monospace for inputs and interactive elements */
+  input,
+  textarea,
+  code,
+  pre,
+  kbd,
+  button {
+    font-family: "Courier New", "Courier", "Liberation Mono", monospace;
+    font-weight: 500;
+  }
+
+  /* Headers use a cleaner serif */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-weight: 600;
+  }
+}

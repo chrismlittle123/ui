@@ -23,7 +23,7 @@ import {
   Avatar,
   AvatarFallback,
   Textarea,
-} from "@chrislittle/theme-core";
+} from "@chrislittle/theme";
 
 const SettingsPage = () => {
   return (

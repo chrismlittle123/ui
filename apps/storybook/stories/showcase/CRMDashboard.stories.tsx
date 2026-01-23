@@ -20,7 +20,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@chrislittle/theme-core";
+} from "@chrislittle/theme";
 
 const CRMDashboard = () => {
   const customers = [

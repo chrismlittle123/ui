@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   THEME: BUSINESS (Stripe-inspired)
+   Professional, trustworthy, polished
+   Based on: https://stripe.com, https://mobbin.com/colors/brand/stripe
+   ============================================ */
+@layer base {
+  :root {
+    /* Stripe: Blue-gray tinted backgrounds, signature purple */
+    --background: 210 20% 98%;       /* #F6F9FC - Stripe's "Black Squeeze" */
+    --foreground: 226 57% 15%;       /* #0A2540 - Stripe's "Downriver" */
+    --card: 0 0% 100%;               /* Pure white cards */
+    --card-foreground: 228 14% 22%;  /* #30313d - Stripe's text color */
+    --popover: 0 0% 100%;
+    --popover-foreground: 228 14% 22%;
+    --primary: 243 100% 68%;         /* #635BFF - Stripe's signature purple */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 228 14% 22%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 243 100% 68%;          /* Stripe purple */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 350 89% 50%;      /* #df1b41 - Stripe's danger */
+    --destructive-foreground: 0 0% 100%;
+    --border: 213 20% 91%;           /* Blue-gray tinted border */
+    --input: 213 20% 91%;
+    --ring: 243 100% 68%;
+    --radius: 0.25rem;               /* Stripe uses small radius (4px) */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
+    letter-spacing: -0.003em;
+  }
+}
