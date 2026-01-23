@@ -27,7 +27,7 @@ ui/
 │       └── runtime/               # Shared runtime (fetch wrapper, types)
 │
 ├── apps/
-│   └── docs/                      # Documentation site / storybook
+│   └── storybook/                 # Storybook for component visualization
 │
 ├── docs/
 │   └── plans/                     # Planning documents
@@ -148,6 +148,106 @@ function App() {
     </Card>
   );
 }
+```
+
+### Storybook Setup
+
+Storybook will live in `apps/storybook/` and provide:
+- Visual component library for all three themes
+- Theme switcher toolbar to compare Graphite / Paper / Business side-by-side
+- Interactive prop controls (via @storybook/addon-controls)
+- Component documentation with usage examples
+
+```
+apps/storybook/
+├── .storybook/
+│   ├── main.ts              # Storybook config
+│   ├── preview.tsx          # Theme provider + decorators
+│   └── theme-switcher.ts    # Custom toolbar addon
+├── stories/
+│   ├── Button.stories.tsx
+│   ├── Input.stories.tsx
+│   ├── Card.stories.tsx
+│   └── ...
+└── package.json
+```
+
+#### Theme Switcher Preview
+
+```tsx
+// .storybook/preview.tsx
+import { themes } from './themes';
+
+export const globalTypes = {
+  theme: {
+    name: 'Theme',
+    description: 'Select component theme',
+    defaultValue: 'graphite',
+    toolbar: {
+      icon: 'paintbrush',
+      items: [
+        { value: 'graphite', title: 'Graphite (Linear)' },
+        { value: 'paper', title: 'Paper (Tldraw)' },
+        { value: 'business', title: 'Business (Stripe)' },
+      ],
+    },
+  },
+};
+
+export const decorators = [
+  (Story, context) => {
+    const theme = context.globals.theme;
+    return (
+      <ThemeProvider theme={themes[theme]}>
+        <Story />
+      </ThemeProvider>
+    );
+  },
+];
+```
+
+#### Example Story
+
+```tsx
+// stories/Button.stories.tsx
+import type { Meta, StoryObj } from '@storybook/react';
+import { Button } from '@yourorg/theme-core';
+
+const meta: Meta<typeof Button> = {
+  title: 'Components/Button',
+  component: Button,
+  argTypes: {
+    variant: {
+      control: 'select',
+      options: ['primary', 'secondary', 'ghost', 'destructive'],
+    },
+    size: {
+      control: 'select',
+      options: ['sm', 'md', 'lg'],
+    },
+  },
+};
+
+export default meta;
+type Story = StoryObj<typeof Button>;
+
+export const Primary: Story = {
+  args: {
+    children: 'Click me',
+    variant: 'primary',
+  },
+};
+
+export const AllVariants: Story = {
+  render: () => (
+    <div className="flex gap-4">
+      <Button variant="primary">Primary</Button>
+      <Button variant="secondary">Secondary</Button>
+      <Button variant="ghost">Ghost</Button>
+      <Button variant="destructive">Destructive</Button>
+    </div>
+  ),
+};
 ```
 
 ---
@@ -409,6 +509,7 @@ export function generate(spec: ParsedSpec, options: GenerateOptions): GeneratedF
 | **shadcn/ui** | Component primitives |
 | **Radix UI** | Accessible primitives (via shadcn) |
 | **clsx + tailwind-merge** | Class utilities |
+| **Storybook 8** | Component visualization & documentation |
 
 ### OpenAPI Client
 
@@ -484,12 +585,13 @@ export function generate(spec: ParsedSpec, options: GenerateOptions): GeneratedF
 - [ ] Add watch mode for development
 - [ ] Write CLI documentation
 
-### Phase 7: Documentation & Polish
+### Phase 7: Storybook & Documentation
 
-- [ ] Set up documentation site (Storybook or similar)
-- [ ] Document all theme components
+- [ ] Set up Storybook in apps/storybook
+- [ ] Configure theme switcher toolbar (Graphite / Paper / Business)
+- [ ] Create stories for all components
+- [ ] Add component documentation (props, usage examples)
 - [ ] Document CLI usage
-- [ ] Add usage examples
 - [ ] Prepare for npm publishing
 
 ---
