@@ -9,7 +9,7 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
-    layout: "centered",
+    layout: "fullscreen",
   },
   globalTypes: {
     theme: {
@@ -31,7 +31,10 @@ const preview: Preview = {
     (Story, context) => {
       const theme = context.globals.theme || "graphite";
       return (
-        <div data-theme={theme} className={`theme-${theme}`}>
+        <div
+          data-theme={theme}
+          className={`theme-${theme} min-h-screen w-full bg-background text-foreground p-8 flex items-center justify-center`}
+        >
           <Story />
         </div>
       );
