@@ -6,14 +6,14 @@ const STORYBOOK_URL = "http://localhost:6010";
 const SCREENSHOTS_DIR = path.join(__dirname, "../screenshots");
 
 const themes = [
-  { name: "graphite", colorModes: ["dark"] }, // Graphite is always dark
-  { name: "newspaper", colorModes: ["light", "dark"] },
   { name: "business", colorModes: ["light", "dark"] },
+  { name: "newspaper", colorModes: ["light", "dark"] },
 ];
 
 const stories = [
   { path: "showcase-color-palette--default", name: "ColorPalette" },
   { path: "showcase-blog-post--default", name: "BlogPost" },
+  { path: "showcase-data-table--default", name: "DataTable" },
 ];
 
 async function takeScreenshots() {

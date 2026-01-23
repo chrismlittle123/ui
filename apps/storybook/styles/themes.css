@@ -1,296 +1,9 @@
 /* Theme CSS Variables - scoped by data attribute for runtime switching */
-
-/* ============================================
-   THEME: GRAPHITE (Linear-inspired)
-   Dark only - minimal, muted, power-user focused
-   ============================================ */
-[data-theme="graphite"] {
-  /* Surface hierarchy: background < card < secondary < muted */
-  --background: 0 0% 6%;
-  --foreground: 0 0% 88%;
-  --card: 220 6% 11%;
-  --card-foreground: 0 0% 88%;
-  --popover: 220 6% 13%;
-  --popover-foreground: 0 0% 88%;
-  --primary: 245 58% 72%;
-  --primary-foreground: 0 0% 100%;
-  --secondary: 220 6% 16%;
-  --secondary-foreground: 0 0% 78%;
-  --muted: 220 6% 20%;
-  --muted-foreground: 0 0% 55%;
-  --accent: 190 75% 50%;
-  --accent-foreground: 0 0% 100%;
-  --destructive: 0 72% 55%;
-  --destructive-foreground: 0 0% 100%;
-  --success: 168 75% 42%;
-  --success-foreground: 0 0% 100%;
-  --warning: 38 92% 50%;
-  --warning-foreground: 0 0% 0%;
-  --info: 200 80% 55%;
-  --info-foreground: 0 0% 100%;
-  --border: 220 6% 22%;
-  --input: 220 6% 11%;
-  --ring: 245 58% 72%;
-  --ring-offset: 0 0% 6%;
-  --radius: 0.375rem;
-
-  /* Chart colors */
-  --chart-1: 245 58% 72%;
-  --chart-2: 190 75% 50%;
-  --chart-3: 168 75% 42%;
-  --chart-4: 38 92% 50%;
-  --chart-5: 280 65% 60%;
-
-  /* Status colors - optimized for dark backgrounds */
-  --status-completed: 162 50% 42%;
-  --status-completed-bg: 162 50% 42% / 0.15;
-  --status-processing: 245 45% 60%;
-  --status-processing-bg: 245 45% 60% / 0.15;
-  --status-pending: 220 6% 50%;
-  --status-pending-bg: 220 6% 50% / 0.1;
-  --status-failed: 0 55% 50%;
-  --status-failed-bg: 0 55% 50% / 0.15;
-  --status-refunded: 280 45% 55%;
-  --status-refunded-bg: 280 45% 55% / 0.15;
-  --status-cancelled: 220 6% 45%;
-  --status-cancelled-bg: 220 6% 45% / 0.1;
-
-  /* Extended color scales */
-  --violet-400: 245 58% 62%;
-  --violet-500: 245 58% 55%;
-  --cyan-400: 190 75% 50%;
-  --cyan-500: 190 75% 42%;
-  --green-400: 162 50% 42%;
-  --green-500: 164 50% 36%;
-  --amber-400: 38 85% 48%;
-  --amber-500: 36 90% 42%;
-  --red-400: 0 65% 50%;
-  --red-500: 0 65% 44%;
-  --blue-400: 210 75% 52%;
-  --blue-500: 210 80% 45%;
-  --purple-400: 280 60% 52%;
-  --purple-500: 280 65% 45%;
-  --gray-400: 220 6% 40%;
-  --gray-500: 220 6% 30%;
-
-  /* Elevation system */
-  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.3);
-  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.4), 0 1px 2px -1px rgb(0 0 0 / 0.4);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.4);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.5);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb(0 0 0 / 0.5);
-  --shadow-glow: 0 0 0 1px hsl(var(--primary) / 0.2), 0 0 12px 0 hsl(var(--primary) / 0.15);
-  --shadow-glow-accent: 0 0 0 1px hsl(var(--accent) / 0.2), 0 0 12px 0 hsl(var(--accent) / 0.15);
-
-  /* Transition timing */
-  --transition-fast: 100ms;
-  --transition-normal: 150ms;
-  --transition-slow: 250ms;
-  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
-  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
-
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  letter-spacing: -0.011em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Graphite custom styles */
-[data-theme="graphite"] ::selection {
-  background: hsl(245 58% 72% / 0.3);
-}
-
-[data-theme="graphite"] ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-[data-theme="graphite"] ::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-[data-theme="graphite"] ::-webkit-scrollbar-thumb {
-  background: hsl(0 0% 50% / 0.3);
-  border-radius: 4px;
-}
-
-[data-theme="graphite"] ::-webkit-scrollbar-thumb:hover {
-  background: hsl(0 0% 50% / 0.5);
-}
-
-/* ============================================
-   THEME: NEWSPAPER (Editorial/Literary)
-   Warm, muted earth tones - soft reading experience
-   ============================================ */
-
-/* Newspaper Light */
-[data-theme="newspaper"] {
-  --background: 30 25% 96%;
-  --foreground: 350 15% 18%;
-  --card: 30 20% 97%;
-  --card-foreground: 350 15% 18%;
-  --popover: 30 20% 97%;
-  --popover-foreground: 350 15% 18%;
-  --primary: 345 35% 40%;
-  --primary-foreground: 30 25% 96%;
-  --secondary: 30 18% 91%;
-  --secondary-foreground: 350 15% 22%;
-  --muted: 30 12% 91%;
-  --muted-foreground: 350 8% 45%;
-  --accent: 145 20% 40%;
-  --accent-foreground: 30 25% 96%;
-  --destructive: 355 45% 45%;
-  --destructive-foreground: 30 25% 96%;
-  --success: 145 25% 42%;
-  --success-foreground: 30 25% 96%;
-  --warning: 35 45% 48%;
-  --warning-foreground: 350 15% 15%;
-  --info: 200 25% 45%;
-  --info-foreground: 30 25% 96%;
-  --link: 345 35% 38%;
-  --border: 30 12% 88%;
-  --input: 30 18% 95%;
-  --ring: 345 35% 40%;
-  --ring-offset: 30 25% 96%;
-  --radius: 0.375rem;
-
-  /* Chart colors - burgundy earth palette */
-  --chart-1: 345 35% 40%;
-  --chart-2: 145 20% 40%;
-  --chart-3: 35 45% 48%;
-  --chart-4: 200 25% 45%;
-  --chart-5: 280 20% 42%;
-
-  /* Status colors - burgundy tones */
-  --status-completed: 145 25% 42%;
-  --status-completed-bg: 145 25% 42% / 0.12;
-  --status-processing: 200 25% 45%;
-  --status-processing-bg: 200 25% 45% / 0.12;
-  --status-pending: 35 45% 48%;
-  --status-pending-bg: 35 45% 48% / 0.12;
-  --status-failed: 355 45% 45%;
-  --status-failed-bg: 355 45% 45% / 0.12;
-  --status-refunded: 280 20% 42%;
-  --status-refunded-bg: 280 20% 42% / 0.12;
-  --status-cancelled: 350 8% 45%;
-  --status-cancelled-bg: 350 8% 45% / 0.1;
-
-  /* Extended burgundy & earth tone palette */
-  --burgundy: 345 35% 40%;
-  --burgundy-light: 345 30% 55%;
-  --wine: 350 40% 35%;
-  --wine-light: 350 35% 50%;
-  --rose: 355 30% 55%;
-  --sage: 145 20% 40%;
-  --sage-light: 145 18% 55%;
-  --ochre: 35 45% 48%;
-  --ochre-light: 35 40% 62%;
-  --sand: 35 22% 75%;
-  --slate: 200 25% 45%;
-  --plum: 280 20% 42%;
-  --olive: 80 22% 38%;
-
-  font-family: "Georgia", "Times New Roman", serif;
-  letter-spacing: -0.01em;
-  line-height: 1.5;
-}
-
-/* Newspaper Dark - warm and cozy like a candlelit study */
-[data-theme="newspaper"].dark,
-[data-theme="newspaper"] .dark {
-  --background: 25 18% 8%;
-  --foreground: 35 20% 90%;
-  --card: 25 15% 12%;
-  --card-foreground: 35 20% 90%;
-  --popover: 25 15% 14%;
-  --popover-foreground: 35 20% 90%;
-  --primary: 345 32% 60%;
-  --primary-foreground: 25 18% 8%;
-  --secondary: 25 12% 16%;
-  --secondary-foreground: 35 18% 85%;
-  --muted: 25 10% 20%;
-  --muted-foreground: 30 12% 55%;
-  --accent: 145 22% 52%;
-  --accent-foreground: 25 18% 8%;
-  --destructive: 355 42% 55%;
-  --destructive-foreground: 35 20% 95%;
-  --success: 145 24% 50%;
-  --success-foreground: 25 18% 8%;
-  --warning: 38 45% 55%;
-  --warning-foreground: 25 18% 8%;
-  --info: 200 28% 55%;
-  --info-foreground: 25 18% 8%;
-  --link: 345 30% 65%;
-  --border: 25 12% 20%;
-  --input: 25 15% 12%;
-  --ring: 345 32% 60%;
-  --ring-offset: 25 18% 8%;
-
-  /* Chart colors - burgundy for dark mode */
-  --chart-1: 345 30% 55%;
-  --chart-2: 145 20% 50%;
-  --chart-3: 35 40% 55%;
-  --chart-4: 200 25% 55%;
-  --chart-5: 280 20% 55%;
-
-  /* Status colors - dark mode burgundy */
-  --status-completed: 145 22% 50%;
-  --status-completed-bg: 145 22% 50% / 0.15;
-  --status-processing: 200 25% 55%;
-  --status-processing-bg: 200 25% 55% / 0.15;
-  --status-pending: 35 40% 55%;
-  --status-pending-bg: 35 40% 55% / 0.12;
-  --status-failed: 355 40% 55%;
-  --status-failed-bg: 355 40% 55% / 0.15;
-  --status-refunded: 280 20% 55%;
-  --status-refunded-bg: 280 20% 55% / 0.15;
-  --status-cancelled: 350 8% 50%;
-  --status-cancelled-bg: 350 8% 50% / 0.1;
-
-  /* Extended burgundy palette - dark mode */
-  --burgundy: 345 32% 58%;
-  --burgundy-light: 345 28% 70%;
-  --wine: 350 35% 52%;
-  --wine-light: 350 30% 62%;
-  --rose: 355 30% 65%;
-  --sage: 145 22% 52%;
-  --sage-light: 145 20% 65%;
-  --ochre: 35 40% 55%;
-  --ochre-light: 35 35% 68%;
-  --sand: 35 20% 65%;
-  --slate: 200 25% 55%;
-  --plum: 280 20% 55%;
-  --olive: 80 20% 48%;
-}
-
-[data-theme="newspaper"] button,
-[data-theme="newspaper"] input,
-[data-theme="newspaper"] select,
-[data-theme="newspaper"] label {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-}
-
-[data-theme="newspaper"] h1,
-[data-theme="newspaper"] h2,
-[data-theme="newspaper"] h3,
-[data-theme="newspaper"] h4,
-[data-theme="newspaper"] h5,
-[data-theme="newspaper"] h6 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-[data-theme="newspaper"] a {
-  color: hsl(var(--link));
-}
+/* Two themes: Business (modern SaaS) and Newspaper (editorial) */
 
 /* ============================================
    THEME: BUSINESS (Stripe-inspired)
-   Light & Dark - Professional, trustworthy, polished
+   Modern SaaS - Professional, trustworthy, polished
    ============================================ */
 
 /* Business Light */
@@ -305,7 +18,7 @@
   --primary-foreground: 0 0% 100%;
   --secondary: 210 20% 96%;
   --secondary-foreground: 228 14% 22%;
-  --muted: 210 20% 96%;
+  --muted: 210 20% 94%;
   --muted-foreground: 220 9% 46%;
   --accent: 172 66% 50%;
   --accent-foreground: 0 0% 100%;
@@ -321,7 +34,7 @@
   --input: 0 0% 100%;
   --ring: 243 100% 68%;
   --ring-offset: 210 20% 98%;
-  --radius: 0.25rem;
+  --radius: 0.375rem;
 
   /* Gradient support */
   --gradient-start: 243 100% 68%;
@@ -377,44 +90,46 @@
   letter-spacing: -0.01em;
 }
 
-/* Business Dark */
+/* Business Dark - polished dark mode with clear surface hierarchy */
 [data-theme="business"].dark,
 [data-theme="business"] .dark {
-  --background: 222 47% 8%;
-  --foreground: 210 40% 95%;
-  --card: 222 47% 11%;
-  --card-foreground: 210 40% 95%;
-  --popover: 222 47% 11%;
-  --popover-foreground: 210 40% 95%;
+  /* Surface hierarchy: background < card < secondary < muted */
+  --background: 222 47% 7%;
+  --foreground: 210 40% 96%;
+  --card: 222 40% 11%;
+  --card-foreground: 210 40% 96%;
+  --popover: 222 40% 13%;
+  --popover-foreground: 210 40% 96%;
   --primary: 243 100% 72%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 222 47% 15%;
-  --secondary-foreground: 210 40% 95%;
-  --muted: 222 47% 15%;
-  --muted-foreground: 210 30% 55%;
+  --secondary: 222 35% 16%;
+  --secondary-foreground: 210 40% 92%;
+  --muted: 222 30% 20%;
+  --muted-foreground: 210 25% 55%;
   --accent: 172 66% 55%;
   --accent-foreground: 0 0% 100%;
-  --destructive: 0 62% 50%;
+  --destructive: 0 72% 55%;
   --destructive-foreground: 0 0% 100%;
-  --success: 152 70% 55%;
+  --success: 152 70% 50%;
   --success-foreground: 0 0% 100%;
   --warning: 38 92% 55%;
   --warning-foreground: 0 0% 0%;
   --info: 210 80% 60%;
   --info-foreground: 0 0% 100%;
-  --border: 222 47% 20%;
-  --input: 222 47% 11%;
+  --border: 222 30% 22%;
+  --input: 222 40% 11%;
   --ring: 243 100% 72%;
-  --ring-offset: 222 47% 8%;
+  --ring-offset: 222 47% 7%;
 
   /* Gradient - brighter for dark */
   --gradient-start: 243 100% 72%;
   --gradient-end: 280 87% 70%;
 
-  /* Shadows - adjusted for dark mode */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.2);
-  --shadow-card: 0 2px 5px -1px rgb(0 0 0 / 0.3), 0 1px 3px -1px rgb(0 0 0 / 0.2);
-  --shadow-elevated: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+  /* Shadow tokens - stronger for dark mode */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-card: 0 2px 5px -1px rgb(0 0 0 / 0.4), 0 1px 3px -1px rgb(0 0 0 / 0.3);
+  --shadow-elevated: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.4);
+  --shadow-glow: 0 0 0 1px hsl(var(--primary) / 0.2), 0 0 12px 0 hsl(var(--primary) / 0.15);
 
   /* Chart colors - brighter for dark mode */
   --chart-1: 243 100% 72%;
@@ -423,21 +138,21 @@
   --chart-4: 0 72% 60%;
   --chart-5: 210 80% 60%;
 
-  /* Status colors - dark mode */
-  --status-completed: 152 70% 55%;
-  --status-completed-bg: 152 70% 55% / 0.15;
-  --status-processing: 243 100% 72%;
-  --status-processing-bg: 243 100% 72% / 0.15;
-  --status-pending: 38 92% 55%;
-  --status-pending-bg: 38 92% 55% / 0.12;
-  --status-failed: 0 72% 60%;
-  --status-failed-bg: 0 72% 60% / 0.15;
-  --status-refunded: 210 80% 60%;
-  --status-refunded-bg: 210 80% 60% / 0.15;
-  --status-cancelled: 210 25% 50%;
-  --status-cancelled-bg: 210 25% 50% / 0.1;
+  /* Status colors - optimized for dark backgrounds */
+  --status-completed: 152 65% 50%;
+  --status-completed-bg: 152 65% 50% / 0.15;
+  --status-processing: 243 85% 70%;
+  --status-processing-bg: 243 85% 70% / 0.15;
+  --status-pending: 38 85% 55%;
+  --status-pending-bg: 38 85% 55% / 0.12;
+  --status-failed: 0 65% 55%;
+  --status-failed-bg: 0 65% 55% / 0.15;
+  --status-refunded: 210 70% 60%;
+  --status-refunded-bg: 210 70% 60% / 0.15;
+  --status-cancelled: 220 15% 50%;
+  --status-cancelled-bg: 220 15% 50% / 0.1;
 
-  /* Extended bright palette - dark mode */
+  /* Extended palette - dark mode */
   --purple-400: 243 100% 75%;
   --purple-500: 243 100% 72%;
   --teal-400: 172 66% 55%;
@@ -456,4 +171,175 @@
   --pink-500: 330 80% 58%;
   --cyan-400: 192 85% 60%;
   --cyan-500: 195 90% 52%;
+}
+
+/* ============================================
+   THEME: NEWSPAPER (Editorial/Literary)
+   Warm, muted earth tones - soft reading experience
+   ============================================ */
+
+/* Newspaper Light */
+[data-theme="newspaper"] {
+  --background: 30 25% 96%;
+  --foreground: 350 15% 18%;
+  --card: 30 20% 97%;
+  --card-foreground: 350 15% 18%;
+  --popover: 30 20% 97%;
+  --popover-foreground: 350 15% 18%;
+  --primary: 345 35% 40%;
+  --primary-foreground: 30 25% 96%;
+  --secondary: 30 18% 91%;
+  --secondary-foreground: 350 15% 22%;
+  --muted: 30 12% 88%;
+  --muted-foreground: 350 8% 45%;
+  --accent: 145 20% 40%;
+  --accent-foreground: 30 25% 96%;
+  --destructive: 355 45% 45%;
+  --destructive-foreground: 30 25% 96%;
+  --success: 145 25% 42%;
+  --success-foreground: 30 25% 96%;
+  --warning: 35 45% 48%;
+  --warning-foreground: 350 15% 15%;
+  --info: 200 25% 45%;
+  --info-foreground: 30 25% 96%;
+  --link: 345 35% 38%;
+  --border: 30 12% 85%;
+  --input: 30 18% 95%;
+  --ring: 345 35% 40%;
+  --ring-offset: 30 25% 96%;
+  --radius: 0.375rem;
+
+  /* Chart colors - burgundy earth palette */
+  --chart-1: 345 35% 40%;
+  --chart-2: 145 20% 40%;
+  --chart-3: 35 45% 48%;
+  --chart-4: 200 25% 45%;
+  --chart-5: 280 20% 42%;
+
+  /* Status colors - burgundy tones */
+  --status-completed: 145 25% 42%;
+  --status-completed-bg: 145 25% 42% / 0.12;
+  --status-processing: 200 25% 45%;
+  --status-processing-bg: 200 25% 45% / 0.12;
+  --status-pending: 35 45% 48%;
+  --status-pending-bg: 35 45% 48% / 0.12;
+  --status-failed: 355 45% 45%;
+  --status-failed-bg: 355 45% 45% / 0.12;
+  --status-refunded: 280 20% 42%;
+  --status-refunded-bg: 280 20% 42% / 0.12;
+  --status-cancelled: 350 8% 45%;
+  --status-cancelled-bg: 350 8% 45% / 0.1;
+
+  /* Extended burgundy & earth tone palette */
+  --burgundy: 345 35% 40%;
+  --burgundy-light: 345 30% 55%;
+  --wine: 350 40% 35%;
+  --wine-light: 350 35% 50%;
+  --rose: 355 30% 55%;
+  --sage: 145 20% 40%;
+  --sage-light: 145 18% 55%;
+  --ochre: 35 45% 48%;
+  --ochre-light: 35 40% 62%;
+  --sand: 35 22% 75%;
+  --slate: 200 25% 45%;
+  --plum: 280 20% 42%;
+  --olive: 80 22% 38%;
+
+  font-family: "Georgia", "Times New Roman", serif;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+}
+
+/* Newspaper Dark - warm and cozy like a candlelit study */
+[data-theme="newspaper"].dark,
+[data-theme="newspaper"] .dark {
+  /* Surface hierarchy: warm browns with clear layering */
+  --background: 25 18% 8%;
+  --foreground: 35 20% 90%;
+  --card: 25 15% 12%;
+  --card-foreground: 35 20% 90%;
+  --popover: 25 15% 14%;
+  --popover-foreground: 35 20% 90%;
+  --primary: 345 32% 60%;
+  --primary-foreground: 25 18% 8%;
+  --secondary: 25 12% 16%;
+  --secondary-foreground: 35 18% 85%;
+  --muted: 25 10% 20%;
+  --muted-foreground: 30 12% 55%;
+  --accent: 145 22% 52%;
+  --accent-foreground: 25 18% 8%;
+  --destructive: 355 42% 55%;
+  --destructive-foreground: 35 20% 95%;
+  --success: 145 24% 50%;
+  --success-foreground: 25 18% 8%;
+  --warning: 38 45% 55%;
+  --warning-foreground: 25 18% 8%;
+  --info: 200 28% 55%;
+  --info-foreground: 25 18% 8%;
+  --link: 345 30% 65%;
+  --border: 25 12% 22%;
+  --input: 25 15% 12%;
+  --ring: 345 32% 60%;
+  --ring-offset: 25 18% 8%;
+
+  /* Chart colors - burgundy for dark mode */
+  --chart-1: 345 30% 55%;
+  --chart-2: 145 20% 50%;
+  --chart-3: 35 40% 55%;
+  --chart-4: 200 25% 55%;
+  --chart-5: 280 20% 55%;
+
+  /* Status colors - dark mode burgundy */
+  --status-completed: 145 22% 50%;
+  --status-completed-bg: 145 22% 50% / 0.15;
+  --status-processing: 200 25% 55%;
+  --status-processing-bg: 200 25% 55% / 0.15;
+  --status-pending: 35 40% 55%;
+  --status-pending-bg: 35 40% 55% / 0.12;
+  --status-failed: 355 40% 55%;
+  --status-failed-bg: 355 40% 55% / 0.15;
+  --status-refunded: 280 20% 55%;
+  --status-refunded-bg: 280 20% 55% / 0.15;
+  --status-cancelled: 350 8% 50%;
+  --status-cancelled-bg: 350 8% 50% / 0.1;
+
+  /* Extended burgundy palette - dark mode */
+  --burgundy: 345 32% 58%;
+  --burgundy-light: 345 28% 70%;
+  --wine: 350 35% 52%;
+  --wine-light: 350 30% 62%;
+  --rose: 355 30% 65%;
+  --sage: 145 22% 52%;
+  --sage-light: 145 20% 65%;
+  --ochre: 35 40% 55%;
+  --ochre-light: 35 35% 68%;
+  --sand: 35 20% 65%;
+  --slate: 200 25% 55%;
+  --plum: 280 20% 55%;
+  --olive: 80 20% 48%;
+}
+
+/* Newspaper typography overrides */
+[data-theme="newspaper"] button,
+[data-theme="newspaper"] input,
+[data-theme="newspaper"] select,
+[data-theme="newspaper"] label {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+[data-theme="newspaper"] h1,
+[data-theme="newspaper"] h2,
+[data-theme="newspaper"] h3,
+[data-theme="newspaper"] h4,
+[data-theme="newspaper"] h5,
+[data-theme="newspaper"] h6 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+[data-theme="newspaper"] a {
+  color: hsl(var(--link));
 }

@@ -24,9 +24,8 @@ const preview: Preview = {
         title: "Theme",
         icon: "paintbrush",
         items: [
-          { value: "graphite", title: "Graphite (Linear)" },
-          { value: "newspaper", title: "Newspaper (Medium)" },
           { value: "business", title: "Business (Stripe)" },
+          { value: "newspaper", title: "Newspaper (Editorial)" },
         ],
         dynamicTitle: true,
       },
@@ -45,16 +44,15 @@ const preview: Preview = {
     },
   },
   initialGlobals: {
-    theme: "graphite",
+    theme: "business",
     colorMode: "light",
   },
   decorators: [
     (Story, context) => {
-      const theme = context.globals.theme || "graphite";
+      const theme = context.globals.theme || "business";
       const colorMode = context.globals.colorMode || "light";
 
-      // Graphite is always dark, others respect colorMode
-      const isDark = theme === "graphite" || colorMode === "dark";
+      const isDark = colorMode === "dark";
 
       useEffect(() => {
         document.documentElement.setAttribute("data-theme", theme);
