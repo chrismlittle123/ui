@@ -1,0 +1,111 @@
+/* Theme CSS Variables - scoped by data attribute for runtime switching */
+
+/* ============================================
+   THEME: GRAPHITE (Linear-inspired)
+   Dark, minimal, muted, power-user focused
+   ============================================ */
+[data-theme="graphite"] {
+  --background: 0 0% 7%;
+  --foreground: 0 0% 80%;
+  --card: 220 6% 10%;
+  --card-foreground: 0 0% 80%;
+  --popover: 220 6% 10%;
+  --popover-foreground: 0 0% 80%;
+  --primary: 235 35% 67%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 220 6% 15%;
+  --secondary-foreground: 0 0% 75%;
+  --muted: 220 6% 15%;
+  --muted-foreground: 0 0% 45%;
+  --accent: 235 35% 67%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 62% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 220 6% 20%;
+  --input: 220 6% 12%;
+  --ring: 235 35% 67%;
+  --radius: 0.375rem;
+
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: -0.011em;
+}
+
+/* ============================================
+   THEME: PAPER (Typewriter meets writing)
+   Warm, clean, soft, friendly, minimal
+   ============================================ */
+[data-theme="paper"] {
+  --background: 40 20% 98%;
+  --foreground: 0 0% 15%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 15%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 15%;
+  --primary: 0 0% 10%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 40 10% 95%;
+  --secondary-foreground: 0 0% 15%;
+  --muted: 40 10% 95%;
+  --muted-foreground: 0 0% 45%;
+  --accent: 174 72% 40%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 40 10% 90%;
+  --input: 0 0% 100%;
+  --ring: 174 72% 40%;
+  --radius: 0.5rem;
+
+  font-family: "Georgia", "Times New Roman", "Times", serif;
+  letter-spacing: 0;
+}
+
+[data-theme="paper"] input,
+[data-theme="paper"] textarea,
+[data-theme="paper"] code,
+[data-theme="paper"] pre,
+[data-theme="paper"] kbd,
+[data-theme="paper"] button {
+  font-family: "Courier New", "Courier", "Liberation Mono", monospace;
+  font-weight: 500;
+}
+
+[data-theme="paper"] h1,
+[data-theme="paper"] h2,
+[data-theme="paper"] h3,
+[data-theme="paper"] h4,
+[data-theme="paper"] h5,
+[data-theme="paper"] h6 {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-weight: 600;
+}
+
+/* ============================================
+   THEME: BUSINESS (Stripe-inspired)
+   Professional, trustworthy, polished
+   ============================================ */
+[data-theme="business"] {
+  --background: 210 20% 98%;
+  --foreground: 226 57% 15%;
+  --card: 0 0% 100%;
+  --card-foreground: 226 57% 15%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 226 57% 15%;
+  --primary: 243 100% 68%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 20% 96%;
+  --secondary-foreground: 226 57% 15%;
+  --muted: 210 20% 96%;
+  --muted-foreground: 226 20% 45%;
+  --accent: 243 100% 68%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 210 20% 90%;
+  --input: 0 0% 100%;
+  --ring: 243 100% 68%;
+  --radius: 0.25rem;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  letter-spacing: -0.01em;
+}
