@@ -5,7 +5,6 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
-  Badge,
   Separator,
   Table,
   TableBody,
@@ -16,6 +15,32 @@ import {
   Avatar,
   AvatarFallback,
 } from "@chrislittle/theme";
+
+// Status badge for non-interactive status display
+const StatusBadge = ({ status }: { status: string }) => {
+  const statusMap: Record<string, string> = {
+    paid: "completed",
+    active: "completed",
+    pending: "pending",
+    overdue: "failed",
+    draft: "cancelled",
+    cancelled: "cancelled",
+    default: "processing",
+  };
+  const key = statusMap[status.toLowerCase()] || "pending";
+
+  return (
+    <span
+      className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium"
+      style={{
+        backgroundColor: `hsl(var(--status-${key}-bg))`,
+        color: `hsl(var(--status-${key}))`,
+      }}
+    >
+      {status}
+    </span>
+  );
+};
 
 const BillingTracker = () => {
   const invoices = [
@@ -31,23 +56,6 @@ const BillingTracker = () => {
     { name: "Cloud Storage", price: "$12/mo", renewal: "Feb 15, 2026", status: "Active" },
     { name: "Analytics Add-on", price: "$29/mo", renewal: "Mar 1, 2026", status: "Cancelled" },
   ];
-
-  const getStatusVariant = (status: string) => {
-    switch (status) {
-      case "Paid":
-      case "Active":
-        return "default";
-      case "Pending":
-        return "secondary";
-      case "Overdue":
-        return "destructive";
-      case "Draft":
-      case "Cancelled":
-        return "outline";
-      default:
-        return "secondary";
-    }
-  };
 
   return (
     <div className="w-[1000px] bg-background p-8">
@@ -123,9 +131,7 @@ const BillingTracker = () => {
                     <TableCell className="text-muted-foreground">{invoice.date}</TableCell>
                     <TableCell>{invoice.amount}</TableCell>
                     <TableCell>
-                      <Badge variant={getStatusVariant(invoice.status) as any}>
-                        {invoice.status}
-                      </Badge>
+                      <StatusBadge status={invoice.status} />
                     </TableCell>
                   </TableRow>
                 ))}
@@ -152,9 +158,7 @@ const BillingTracker = () => {
                       <p className="text-xs text-muted-foreground">{sub.price}</p>
                     </div>
                   </div>
-                  <Badge variant={getStatusVariant(sub.status) as any} className="text-xs">
-                    {sub.status}
-                  </Badge>
+                  <StatusBadge status={sub.status} />
                 </div>
                 <p className="text-xs text-muted-foreground">
                   {sub.status === "Cancelled" ? "Ends" : "Renews"}: {sub.renewal}
@@ -187,7 +191,7 @@ const BillingTracker = () => {
                 <p className="font-medium text-sm">Visa ending in 4242</p>
                 <p className="text-xs text-muted-foreground">Expires 12/27</p>
               </div>
-              <Badge>Default</Badge>
+              <StatusBadge status="Default" />
             </div>
             <div className="flex items-center gap-4 p-4 border rounded-lg flex-1">
               <div className="w-12 h-8 bg-gradient-to-r from-orange-500 to-yellow-400 rounded flex items-center justify-center text-white text-xs font-bold">

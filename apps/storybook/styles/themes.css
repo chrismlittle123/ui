@@ -1,6 +1,9 @@
 /* Theme CSS Variables - scoped by data attribute for runtime switching */
 /* Two themes: Business (modern SaaS) and Newspaper (editorial) */
 
+/* Import Source Serif 4 for Newspaper theme - elegant editorial serif */
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500&display=swap');
+
 /* ============================================
    THEME: BUSINESS (Stripe-inspired)
    Modern SaaS - Professional, trustworthy, polished
@@ -52,19 +55,19 @@
   --chart-4: 350 89% 50%;
   --chart-5: 210 85% 50%;
 
-  /* Status colors - vibrant and clear */
-  --status-completed: 152 75% 48%;
-  --status-completed-bg: 152 75% 48% / 0.12;
-  --status-processing: 243 100% 68%;
-  --status-processing-bg: 243 100% 68% / 0.12;
-  --status-pending: 38 92% 50%;
-  --status-pending-bg: 38 92% 50% / 0.12;
-  --status-failed: 350 89% 50%;
-  --status-failed-bg: 350 89% 50% / 0.12;
-  --status-refunded: 210 85% 50%;
-  --status-refunded-bg: 210 85% 50% / 0.12;
-  --status-cancelled: 210 15% 45%;
-  --status-cancelled-bg: 210 15% 45% / 0.1;
+  /* Status colors - light mode: darker bg, dark text */
+  --status-completed: 152 45% 30%;
+  --status-completed-bg: 152 50% 45% / 0.18;
+  --status-processing: 243 60% 45%;
+  --status-processing-bg: 243 70% 55% / 0.18;
+  --status-pending: 38 70% 35%;
+  --status-pending-bg: 38 75% 50% / 0.18;
+  --status-failed: 350 65% 40%;
+  --status-failed-bg: 350 70% 50% / 0.18;
+  --status-refunded: 210 55% 40%;
+  --status-refunded-bg: 210 65% 50% / 0.18;
+  --status-cancelled: 210 10% 40%;
+  --status-cancelled-bg: 210 10% 50% / 0.12;
 
   /* Extended bright palette */
   --purple-400: 243 100% 72%;
@@ -138,19 +141,19 @@
   --chart-4: 0 72% 60%;
   --chart-5: 210 80% 60%;
 
-  /* Status colors - optimized for dark backgrounds */
-  --status-completed: 152 65% 50%;
-  --status-completed-bg: 152 65% 50% / 0.15;
-  --status-processing: 243 85% 70%;
-  --status-processing-bg: 243 85% 70% / 0.15;
-  --status-pending: 38 85% 55%;
-  --status-pending-bg: 38 85% 55% / 0.12;
-  --status-failed: 0 65% 55%;
+  /* Status colors - dark mode: light transparent bg, light text */
+  --status-completed: 152 70% 65%;
+  --status-completed-bg: 152 60% 50% / 0.15;
+  --status-processing: 243 90% 78%;
+  --status-processing-bg: 243 80% 65% / 0.15;
+  --status-pending: 38 90% 68%;
+  --status-pending-bg: 38 80% 55% / 0.12;
+  --status-failed: 0 75% 68%;
   --status-failed-bg: 0 65% 55% / 0.15;
-  --status-refunded: 210 70% 60%;
-  --status-refunded-bg: 210 70% 60% / 0.15;
-  --status-cancelled: 220 15% 50%;
-  --status-cancelled-bg: 220 15% 50% / 0.1;
+  --status-refunded: 210 80% 72%;
+  --status-refunded-bg: 210 70% 58% / 0.15;
+  --status-cancelled: 220 15% 65%;
+  --status-cancelled-bg: 220 12% 50% / 0.12;
 
   /* Extended palette - dark mode */
   --purple-400: 243 100% 75%;
@@ -216,19 +219,19 @@
   --chart-4: 200 25% 45%;
   --chart-5: 280 20% 42%;
 
-  /* Status colors - burgundy tones */
-  --status-completed: 145 25% 42%;
-  --status-completed-bg: 145 25% 42% / 0.12;
-  --status-processing: 200 25% 45%;
-  --status-processing-bg: 200 25% 45% / 0.12;
-  --status-pending: 35 45% 48%;
-  --status-pending-bg: 35 45% 48% / 0.12;
-  --status-failed: 355 45% 45%;
-  --status-failed-bg: 355 45% 45% / 0.12;
-  --status-refunded: 280 20% 42%;
-  --status-refunded-bg: 280 20% 42% / 0.12;
-  --status-cancelled: 350 8% 45%;
-  --status-cancelled-bg: 350 8% 45% / 0.1;
+  /* Status colors - light mode: darker bg, dark text */
+  --status-completed: 145 30% 32%;
+  --status-completed-bg: 145 28% 42% / 0.18;
+  --status-processing: 200 30% 35%;
+  --status-processing-bg: 200 28% 45% / 0.18;
+  --status-pending: 35 50% 35%;
+  --status-pending-bg: 35 45% 48% / 0.18;
+  --status-failed: 355 50% 38%;
+  --status-failed-bg: 355 45% 48% / 0.18;
+  --status-refunded: 280 25% 35%;
+  --status-refunded-bg: 280 22% 45% / 0.18;
+  --status-cancelled: 350 10% 38%;
+  --status-cancelled-bg: 350 8% 45% / 0.12;
 
   /* Extended burgundy & earth tone palette */
   --burgundy: 345 35% 40%;
@@ -245,12 +248,12 @@
   --plum: 280 20% 42%;
   --olive: 80 22% 38%;
 
-  font-family: "Georgia", "Times New Roman", serif;
+  font-family: "Source Serif 4", Georgia, serif;
   letter-spacing: -0.01em;
   line-height: 1.5;
 }
 
-/* Newspaper Dark - warm and cozy like a candlelit study */
+/* Newspaper Dark - Anthropic-inspired warm orange on dark brown */
 [data-theme="newspaper"].dark,
 [data-theme="newspaper"] .dark {
   /* Surface hierarchy: warm browns with clear layering */
@@ -260,13 +263,13 @@
   --card-foreground: 35 20% 90%;
   --popover: 25 15% 14%;
   --popover-foreground: 35 20% 90%;
-  --primary: 345 32% 60%;
+  --primary: 18 65% 58%;
   --primary-foreground: 25 18% 8%;
   --secondary: 25 12% 16%;
   --secondary-foreground: 35 18% 85%;
   --muted: 25 10% 20%;
   --muted-foreground: 30 12% 55%;
-  --accent: 145 22% 52%;
+  --accent: 18 60% 52%;
   --accent-foreground: 25 18% 8%;
   --destructive: 355 42% 55%;
   --destructive-foreground: 35 20% 95%;
@@ -276,32 +279,32 @@
   --warning-foreground: 25 18% 8%;
   --info: 200 28% 55%;
   --info-foreground: 25 18% 8%;
-  --link: 345 30% 65%;
+  --link: 18 60% 62%;
   --border: 25 12% 22%;
   --input: 25 15% 12%;
-  --ring: 345 32% 60%;
+  --ring: 18 65% 58%;
   --ring-offset: 25 18% 8%;
 
-  /* Chart colors - burgundy for dark mode */
-  --chart-1: 345 30% 55%;
+  /* Chart colors - orange primary for dark mode */
+  --chart-1: 18 60% 55%;
   --chart-2: 145 20% 50%;
   --chart-3: 35 40% 55%;
   --chart-4: 200 25% 55%;
   --chart-5: 280 20% 55%;
 
-  /* Status colors - dark mode burgundy */
-  --status-completed: 145 22% 50%;
-  --status-completed-bg: 145 22% 50% / 0.15;
-  --status-processing: 200 25% 55%;
-  --status-processing-bg: 200 25% 55% / 0.15;
-  --status-pending: 35 40% 55%;
-  --status-pending-bg: 35 40% 55% / 0.12;
-  --status-failed: 355 40% 55%;
-  --status-failed-bg: 355 40% 55% / 0.15;
-  --status-refunded: 280 20% 55%;
-  --status-refunded-bg: 280 20% 55% / 0.15;
-  --status-cancelled: 350 8% 50%;
-  --status-cancelled-bg: 350 8% 50% / 0.1;
+  /* Status colors - dark mode: light transparent bg, light text */
+  --status-completed: 145 28% 62%;
+  --status-completed-bg: 145 24% 48% / 0.15;
+  --status-processing: 200 32% 65%;
+  --status-processing-bg: 200 28% 52% / 0.15;
+  --status-pending: 35 50% 65%;
+  --status-pending-bg: 35 42% 52% / 0.12;
+  --status-failed: 355 48% 65%;
+  --status-failed-bg: 355 42% 52% / 0.15;
+  --status-refunded: 280 25% 65%;
+  --status-refunded-bg: 280 22% 52% / 0.15;
+  --status-cancelled: 350 10% 60%;
+  --status-cancelled-bg: 350 8% 48% / 0.12;
 
   /* Extended burgundy palette - dark mode */
   --burgundy: 345 32% 58%;
@@ -319,12 +322,19 @@
   --olive: 80 20% 48%;
 }
 
-/* Newspaper typography overrides */
+/* Newspaper typography overrides - UI elements use sans-serif */
 [data-theme="newspaper"] button,
+[data-theme="newspaper"] button *,
+[data-theme="newspaper"] [role="button"],
+[data-theme="newspaper"] [role="button"] *,
 [data-theme="newspaper"] input,
 [data-theme="newspaper"] select,
-[data-theme="newspaper"] label {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+[data-theme="newspaper"] label,
+[data-theme="newspaper"] .rounded-full,
+[data-theme="newspaper"] [class*="badge"],
+[data-theme="newspaper"] td span,
+[data-theme="newspaper"] th {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   font-weight: 500;
   letter-spacing: 0;
 }

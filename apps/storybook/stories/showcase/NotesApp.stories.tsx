@@ -12,6 +12,28 @@ import {
   AvatarFallback,
 } from "@chrislittle/theme";
 
+// Status badge for non-interactive tag display
+const TagBadge = ({ tag }: { tag: string }) => {
+  const tagMap: Record<string, string> = {
+    work: "processing",
+    personal: "completed",
+    learning: "pending",
+  };
+  const key = tagMap[tag.toLowerCase()] || "processing";
+
+  return (
+    <span
+      className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium"
+      style={{
+        backgroundColor: `hsl(var(--status-${key}-bg))`,
+        color: `hsl(var(--status-${key}))`,
+      }}
+    >
+      {tag}
+    </span>
+  );
+};
+
 const NotesApp = () => {
   const notes = [
     { id: 1, title: "Project Ideas", preview: "Brainstorming session notes from the team meeting...", tag: "Work", time: "2h ago" },
@@ -60,7 +82,7 @@ const NotesApp = () => {
             <p className="text-sm text-muted-foreground">Last edited 2 hours ago</p>
           </div>
           <div className="flex items-center gap-2">
-            <Badge>Work</Badge>
+            <TagBadge tag="Work" />
             <Button variant="outline" size="sm">Share</Button>
             <Button variant="ghost" size="icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>

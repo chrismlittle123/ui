@@ -15,6 +15,11 @@ const stories = [
   { path: "showcase-blog-post--default", name: "BlogPost" },
   { path: "showcase-data-table--default", name: "DataTable" },
   { path: "showcase-crm-dashboard--default", name: "CRMDashboard" },
+  { path: "showcase-analytics-dashboard--default", name: "AnalyticsDashboard" },
+  { path: "showcase-billing-tracker--default", name: "BillingTracker" },
+  { path: "showcase-login-page--default", name: "LoginPage" },
+  { path: "showcase-notes-app--default", name: "NotesApp" },
+  { path: "showcase-settings-page--default", name: "SettingsPage" },
 ];
 
 async function takeScreenshots() {

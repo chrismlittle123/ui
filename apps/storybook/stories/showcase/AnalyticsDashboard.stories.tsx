@@ -6,7 +6,6 @@ import {
   CardHeader,
   CardTitle,
   CardDescription,
-  Badge,
   Avatar,
   AvatarFallback,
   Tabs,
@@ -18,6 +17,23 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@chrislittle/theme";
+
+// Status badge for non-interactive status display
+const StatusBadge = ({ value, positive }: { value: string; positive: boolean }) => {
+  const key = positive ? "completed" : "failed";
+
+  return (
+    <span
+      className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium"
+      style={{
+        backgroundColor: `hsl(var(--status-${key}-bg))`,
+        color: `hsl(var(--status-${key}))`,
+      }}
+    >
+      {value}
+    </span>
+  );
+};
 
 const AnalyticsDashboard = () => {
   const stats = [
@@ -159,7 +175,7 @@ const AnalyticsDashboard = () => {
               <div key={product.name} className="p-4 border rounded-lg">
                 <div className="flex items-center justify-between mb-2">
                   <span className="font-medium">{product.name}</span>
-                  <Badge variant="secondary">{product.growth}</Badge>
+                  <StatusBadge value={product.growth} positive={true} />
                 </div>
                 <div className="text-2xl font-bold mb-1">{product.revenue}</div>
                 <p className="text-sm text-muted-foreground">{product.sales} sales</p>
