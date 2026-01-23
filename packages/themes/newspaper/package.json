@@ -1,7 +1,7 @@
 {
-  "name": "@chrislittle/theme-paper",
+  "name": "@chrislittle/theme-newspaper",
   "version": "0.0.1",
-  "description": "Paper theme - Warm, clean, Tldraw/Finchly-inspired UI components",
+  "description": "Newspaper theme - Medium/Every.to-inspired clean reading experience",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",

@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   THEME: NEWSPAPER (Medium/Every.to-inspired)
+   Clean reading experience, editorial, modern
+   ============================================ */
+@layer base {
+  :root {
+    /* Clean white background */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 13%;              /* Near-black for high contrast */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 13%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 13%;
+    --primary: 118 71% 31%;              /* Medium green #1A8917 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 13%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 118 71% 31%;               /* Same Medium green */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 90%;                  /* Subtle gray borders */
+    --input: 0 0% 100%;
+    --ring: 118 71% 31%;
+    --radius: 0.25rem;                   /* Subtle rounding like Medium */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Charter", "Georgia", "Cambria", "Times New Roman", serif;
+    letter-spacing: 0;
+    line-height: 1.6;
+  }
+
+  /* Sans-serif for UI elements */
+  button,
+  input,
+  select,
+  label {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    font-weight: 500;
+  }
+
+  /* Bold sans-serif headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+}

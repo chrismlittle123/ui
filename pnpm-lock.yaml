@@ -26,9 +26,9 @@ importers:
       '@chrislittle/theme-graphite':
         specifier: workspace:*
         version: link:../../packages/themes/graphite
-      '@chrislittle/theme-paper':
+      '@chrislittle/theme-newspaper':
         specifier: workspace:*
-        version: link:../../packages/themes/paper
+        version: link:../../packages/themes/newspaper
       '@chrislittle/ui-primitives':
         specifier: workspace:*
         version: link:../../packages/primitives
@@ -356,7 +356,7 @@ importers:
         specifier: ^5.7.0
         version: 5.9.3
 
-  packages/themes/paper:
+  packages/themes/newspaper:
     dependencies:
       '@chrislittle/ui-primitives':
         specifier: workspace:*
