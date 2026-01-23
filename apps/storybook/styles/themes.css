@@ -6,25 +6,39 @@
    ============================================ */
 [data-theme="graphite"] {
   --background: 0 0% 7%;
-  --foreground: 0 0% 80%;
+  --foreground: 0 0% 85%;
   --card: 220 6% 10%;
-  --card-foreground: 0 0% 80%;
+  --card-foreground: 0 0% 85%;
   --popover: 220 6% 10%;
-  --popover-foreground: 0 0% 80%;
+  --popover-foreground: 0 0% 85%;
   --primary: 245 58% 72%;
   --primary-foreground: 0 0% 100%;
   --secondary: 220 6% 15%;
   --secondary-foreground: 0 0% 75%;
   --muted: 220 6% 15%;
-  --muted-foreground: 0 0% 45%;
+  --muted-foreground: 0 0% 50%;
   --accent: 190 75% 50%;
   --accent-foreground: 0 0% 100%;
   --destructive: 0 72% 55%;
   --destructive-foreground: 0 0% 100%;
+  --success: 168 75% 42%;
+  --success-foreground: 0 0% 100%;
+  --warning: 38 92% 50%;
+  --warning-foreground: 0 0% 0%;
+  --info: 200 80% 55%;
+  --info-foreground: 0 0% 100%;
   --border: 220 6% 20%;
   --input: 220 6% 12%;
   --ring: 245 58% 72%;
+  --ring-offset: 0 0% 7%;
   --radius: 0.375rem;
+
+  /* Chart colors */
+  --chart-1: 245 58% 72%;
+  --chart-2: 190 75% 50%;
+  --chart-3: 168 75% 42%;
+  --chart-4: 38 92% 50%;
+  --chart-5: 280 65% 60%;
 
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   letter-spacing: -0.011em;
@@ -37,26 +51,41 @@
 
 /* Newspaper Light */
 [data-theme="newspaper"] {
-  --background: 0 0% 100%;
+  --background: 40 20% 99%;
   --foreground: 0 0% 9%;
   --card: 0 0% 100%;
   --card-foreground: 0 0% 9%;
   --popover: 0 0% 100%;
   --popover-foreground: 0 0% 9%;
-  --primary: 0 0% 9%;
+  --primary: 118 71% 31%;
   --primary-foreground: 0 0% 100%;
   --secondary: 0 0% 96%;
   --secondary-foreground: 0 0% 9%;
   --muted: 0 0% 96%;
   --muted-foreground: 0 0% 40%;
-  --accent: 0 0% 9%;
+  --accent: 118 71% 31%;
   --accent-foreground: 0 0% 100%;
   --destructive: 0 72% 51%;
   --destructive-foreground: 0 0% 100%;
+  --success: 118 71% 31%;
+  --success-foreground: 0 0% 100%;
+  --warning: 38 92% 50%;
+  --warning-foreground: 0 0% 0%;
+  --info: 210 80% 50%;
+  --info-foreground: 0 0% 100%;
+  --link: 118 71% 31%;
   --border: 0 0% 92%;
   --input: 0 0% 100%;
-  --ring: 0 0% 9%;
+  --ring: 118 71% 31%;
+  --ring-offset: 40 20% 99%;
   --radius: 0.375rem;
+
+  /* Chart colors */
+  --chart-1: 118 71% 31%;
+  --chart-2: 210 80% 50%;
+  --chart-3: 38 92% 50%;
+  --chart-4: 0 72% 51%;
+  --chart-5: 280 65% 50%;
 
   font-family: "Georgia", "Times New Roman", serif;
   letter-spacing: -0.01em;
@@ -82,9 +111,24 @@
   --accent-foreground: 0 0% 0%;
   --destructive: 0 62% 50%;
   --destructive-foreground: 0 0% 100%;
+  --success: 150 60% 45%;
+  --success-foreground: 0 0% 100%;
+  --warning: 38 92% 50%;
+  --warning-foreground: 0 0% 0%;
+  --info: 210 80% 60%;
+  --info-foreground: 0 0% 100%;
+  --link: 0 0% 85%;
   --border: 0 0% 18%;
   --input: 0 0% 6%;
   --ring: 0 0% 100%;
+  --ring-offset: 0 0% 0%;
+
+  /* Chart colors - adjusted for dark mode */
+  --chart-1: 150 60% 45%;
+  --chart-2: 210 80% 60%;
+  --chart-3: 38 92% 60%;
+  --chart-4: 0 72% 60%;
+  --chart-5: 280 65% 60%;
 }
 
 [data-theme="newspaper"] button,
@@ -102,9 +146,13 @@
 [data-theme="newspaper"] h4,
 [data-theme="newspaper"] h5,
 [data-theme="newspaper"] h6 {
-  font-family: "Georgia", "Times New Roman", serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-weight: 700;
   letter-spacing: -0.02em;
+}
+
+[data-theme="newspaper"] a {
+  color: hsl(var(--link));
 }
 
 /* ============================================
@@ -114,26 +162,49 @@
 
 /* Business Light */
 [data-theme="business"] {
-  --background: 210 40% 98%;
-  --foreground: 220 30% 15%;
+  --background: 210 20% 98%;
+  --foreground: 226 57% 15%;
   --card: 0 0% 100%;
-  --card-foreground: 220 30% 15%;
+  --card-foreground: 228 14% 22%;
   --popover: 0 0% 100%;
-  --popover-foreground: 220 30% 15%;
-  --primary: 217 91% 50%;
+  --popover-foreground: 228 14% 22%;
+  --primary: 243 100% 68%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 210 40% 96%;
-  --secondary-foreground: 220 30% 15%;
-  --muted: 210 40% 96%;
-  --muted-foreground: 220 20% 45%;
-  --accent: 160 84% 39%;
+  --secondary: 210 20% 96%;
+  --secondary-foreground: 228 14% 22%;
+  --muted: 210 20% 96%;
+  --muted-foreground: 220 9% 46%;
+  --accent: 172 66% 50%;
   --accent-foreground: 0 0% 100%;
-  --destructive: 0 84% 60%;
+  --destructive: 350 89% 50%;
   --destructive-foreground: 0 0% 100%;
-  --border: 214 32% 91%;
+  --success: 172 66% 50%;
+  --success-foreground: 0 0% 100%;
+  --warning: 38 92% 50%;
+  --warning-foreground: 0 0% 0%;
+  --info: 210 80% 50%;
+  --info-foreground: 0 0% 100%;
+  --border: 213 20% 91%;
   --input: 0 0% 100%;
-  --ring: 217 91% 50%;
-  --radius: 0.5rem;
+  --ring: 243 100% 68%;
+  --ring-offset: 210 20% 98%;
+  --radius: 0.25rem;
+
+  /* Gradient support */
+  --gradient-start: 243 100% 68%;
+  --gradient-end: 280 87% 65%;
+
+  /* Shadow tokens */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-card: 0 2px 5px -1px rgb(0 0 0 / 0.05), 0 1px 3px -1px rgb(0 0 0 / 0.1);
+  --shadow-elevated: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  /* Chart colors */
+  --chart-1: 243 100% 68%;
+  --chart-2: 172 66% 50%;
+  --chart-3: 38 92% 50%;
+  --chart-4: 350 89% 50%;
+  --chart-5: 210 80% 50%;
 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   letter-spacing: -0.01em;
@@ -148,17 +219,40 @@
   --card-foreground: 210 40% 95%;
   --popover: 222 47% 11%;
   --popover-foreground: 210 40% 95%;
-  --primary: 217 91% 60%;
+  --primary: 243 100% 72%;
   --primary-foreground: 0 0% 100%;
   --secondary: 222 47% 15%;
   --secondary-foreground: 210 40% 95%;
   --muted: 222 47% 15%;
   --muted-foreground: 210 30% 55%;
-  --accent: 160 84% 45%;
+  --accent: 172 66% 55%;
   --accent-foreground: 0 0% 100%;
   --destructive: 0 62% 50%;
   --destructive-foreground: 0 0% 100%;
+  --success: 172 66% 55%;
+  --success-foreground: 0 0% 100%;
+  --warning: 38 92% 55%;
+  --warning-foreground: 0 0% 0%;
+  --info: 210 80% 60%;
+  --info-foreground: 0 0% 100%;
   --border: 222 47% 20%;
   --input: 222 47% 11%;
-  --ring: 217 91% 60%;
+  --ring: 243 100% 72%;
+  --ring-offset: 222 47% 8%;
+
+  /* Gradient - brighter for dark */
+  --gradient-start: 243 100% 72%;
+  --gradient-end: 280 87% 70%;
+
+  /* Shadows - adjusted for dark mode */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.2);
+  --shadow-card: 0 2px 5px -1px rgb(0 0 0 / 0.3), 0 1px 3px -1px rgb(0 0 0 / 0.2);
+  --shadow-elevated: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+
+  /* Chart colors - brighter for dark mode */
+  --chart-1: 243 100% 72%;
+  --chart-2: 172 66% 55%;
+  --chart-3: 38 92% 60%;
+  --chart-4: 0 72% 60%;
+  --chart-5: 210 80% 60%;
 }

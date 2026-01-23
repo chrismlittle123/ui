@@ -8,27 +8,80 @@
    ============================================ */
 @layer base {
   :root {
-    /* Clean white background */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 13%;              /* Near-black for high contrast */
+    /* Slightly warm off-white for softer reading */
+    --background: 40 20% 99%;
+    --foreground: 0 0% 9%;               /* True near-black for high contrast */
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 13%;
+    --card-foreground: 0 0% 9%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 13%;
+    --popover-foreground: 0 0% 9%;
     --primary: 118 71% 31%;              /* Medium green #1A8917 */
     --primary-foreground: 0 0% 100%;
     --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 13%;
+    --secondary-foreground: 0 0% 9%;
     --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted-foreground: 0 0% 40%;
     --accent: 118 71% 31%;               /* Same Medium green */
     --accent-foreground: 0 0% 100%;
-    --destructive: 0 84% 60%;
+    --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 90%;                  /* Subtle gray borders */
+    --success: 118 71% 31%;              /* Green - same as brand */
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;               /* Amber */
+    --warning-foreground: 0 0% 0%;
+    --info: 210 80% 50%;                 /* Blue */
+    --info-foreground: 0 0% 100%;
+    --link: 118 71% 31%;                 /* Green for inline links */
+    --border: 0 0% 92%;                  /* Subtle gray borders */
     --input: 0 0% 100%;
     --ring: 118 71% 31%;
-    --radius: 0.25rem;                   /* Subtle rounding like Medium */
+    --ring-offset: 40 20% 99%;           /* Matches background */
+    --radius: 0.375rem;
+
+    /* Chart colors for data visualization */
+    --chart-1: 118 71% 31%;              /* Medium green */
+    --chart-2: 210 80% 50%;              /* Blue */
+    --chart-3: 38 92% 50%;               /* Amber */
+    --chart-4: 0 72% 51%;                /* Red */
+    --chart-5: 280 65% 50%;              /* Purple */
+  }
+
+  /* Dark mode */
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 0 0% 100%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 150 60% 45%;              /* Softer green for dark mode */
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 0%;
+    --info: 210 80% 60%;
+    --info-foreground: 0 0% 100%;
+    --link: 0 0% 85%;                    /* Lighter link for dark mode */
+    --border: 0 0% 18%;
+    --input: 0 0% 6%;
+    --ring: 0 0% 100%;
+    --ring-offset: 0 0% 0%;
+
+    /* Chart colors - adjusted for dark mode */
+    --chart-1: 150 60% 45%;
+    --chart-2: 210 80% 60%;
+    --chart-3: 38 92% 60%;
+    --chart-4: 0 72% 60%;
+    --chart-5: 280 65% 60%;
   }
 }
 
@@ -52,10 +105,15 @@
     font-weight: 500;
   }
 
-  /* Bold sans-serif headings */
+  /* Bold sans-serif headings - Medium style */
   h1, h2, h3, h4, h5, h6 {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
     font-weight: 700;
     letter-spacing: -0.02em;
+  }
+
+  /* Links inherit the link color */
+  a {
+    color: hsl(var(--link));
   }
 }

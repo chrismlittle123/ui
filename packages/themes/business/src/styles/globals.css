@@ -22,14 +22,83 @@
     --secondary-foreground: 228 14% 22%;
     --muted: 210 20% 96%;
     --muted-foreground: 220 9% 46%;
-    --accent: 243 100% 68%;          /* Stripe purple */
+    --accent: 172 66% 50%;           /* Teal - Stripe's secondary accent */
     --accent-foreground: 0 0% 100%;
     --destructive: 350 89% 50%;      /* #df1b41 - Stripe's danger */
     --destructive-foreground: 0 0% 100%;
+    --success: 172 66% 50%;          /* Teal for success states */
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;           /* Amber */
+    --warning-foreground: 0 0% 0%;
+    --info: 210 80% 50%;             /* Blue */
+    --info-foreground: 0 0% 100%;
     --border: 213 20% 91%;           /* Blue-gray tinted border */
-    --input: 213 20% 91%;
+    --input: 0 0% 100%;              /* Pure white inputs for contrast */
     --ring: 243 100% 68%;
+    --ring-offset: 210 20% 98%;      /* Matches background */
     --radius: 0.25rem;               /* Stripe uses small radius (4px) */
+
+    /* Gradient support */
+    --gradient-start: 243 100% 68%;  /* Stripe purple */
+    --gradient-end: 280 87% 65%;     /* Purple-pink */
+
+    /* Shadow tokens */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-card: 0 2px 5px -1px rgb(0 0 0 / 0.05), 0 1px 3px -1px rgb(0 0 0 / 0.1);
+    --shadow-elevated: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+    /* Chart colors for data visualization */
+    --chart-1: 243 100% 68%;         /* Stripe purple */
+    --chart-2: 172 66% 50%;          /* Teal */
+    --chart-3: 38 92% 50%;           /* Amber */
+    --chart-4: 350 89% 50%;          /* Red */
+    --chart-5: 210 80% 50%;          /* Blue */
+  }
+
+  /* Dark mode */
+  .dark {
+    --background: 222 47% 8%;
+    --foreground: 210 40% 95%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 95%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 95%;
+    --primary: 243 100% 72%;         /* Slightly brighter purple for dark */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 222 47% 15%;
+    --secondary-foreground: 210 40% 95%;
+    --muted: 222 47% 15%;
+    --muted-foreground: 210 30% 55%;
+    --accent: 172 66% 55%;           /* Brighter teal for dark */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 172 66% 55%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 55%;
+    --warning-foreground: 0 0% 0%;
+    --info: 210 80% 60%;
+    --info-foreground: 0 0% 100%;
+    --border: 222 47% 20%;
+    --input: 222 47% 11%;
+    --ring: 243 100% 72%;
+    --ring-offset: 222 47% 8%;
+
+    /* Gradient - brighter for dark */
+    --gradient-start: 243 100% 72%;
+    --gradient-end: 280 87% 70%;
+
+    /* Shadows - more subtle in dark mode */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.2);
+    --shadow-card: 0 2px 5px -1px rgb(0 0 0 / 0.3), 0 1px 3px -1px rgb(0 0 0 / 0.2);
+    --shadow-elevated: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+
+    /* Chart colors - brighter for dark mode */
+    --chart-1: 243 100% 72%;
+    --chart-2: 172 66% 55%;
+    --chart-3: 38 92% 60%;
+    --chart-4: 0 72% 60%;
+    --chart-5: 210 80% 60%;
   }
 }
 

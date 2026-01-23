@@ -11,25 +11,39 @@
   :root {
     /* Linear's dark theme: nearly black with subtle cool undertones */
     --background: 0 0% 7%;           /* #121212 */
-    --foreground: 0 0% 80%;          /* #cccccc - NOT pure white */
+    --foreground: 0 0% 85%;          /* Slightly brighter for better readability */
     --card: 220 6% 10%;              /* #1b1c1d */
-    --card-foreground: 0 0% 80%;
+    --card-foreground: 0 0% 85%;
     --popover: 220 6% 10%;
-    --popover-foreground: 0 0% 80%;
-    --primary: 235 35% 67%;          /* #848CD0 - muted lavender, NOT saturated purple */
+    --popover-foreground: 0 0% 85%;
+    --primary: 245 58% 72%;          /* Brighter lavender for primary actions */
     --primary-foreground: 0 0% 100%;
     --secondary: 220 6% 15%;         /* #222326 */
     --secondary-foreground: 0 0% 75%;
     --muted: 220 6% 15%;
-    --muted-foreground: 0 0% 45%;
-    --accent: 235 35% 67%;           /* Same muted lavender */
+    --muted-foreground: 0 0% 50%;
+    --accent: 190 75% 50%;           /* Cyan/teal - Linear's secondary accent */
     --accent-foreground: 0 0% 100%;
-    --destructive: 0 62% 50%;
+    --destructive: 0 72% 55%;
     --destructive-foreground: 0 0% 100%;
+    --success: 168 75% 42%;          /* Teal-green for positive states */
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;           /* Amber for warnings */
+    --warning-foreground: 0 0% 0%;
+    --info: 200 80% 55%;             /* Blue for informational */
+    --info-foreground: 0 0% 100%;
     --border: 220 6% 20%;
     --input: 220 6% 12%;             /* #171717 - dark inputs */
-    --ring: 235 35% 67%;
+    --ring: 245 58% 72%;
+    --ring-offset: 0 0% 7%;          /* Matches background for focus rings */
     --radius: 0.375rem;              /* Linear uses subtle rounding */
+
+    /* Chart colors for data visualization */
+    --chart-1: 245 58% 72%;          /* Primary lavender */
+    --chart-2: 190 75% 50%;          /* Cyan accent */
+    --chart-3: 168 75% 42%;          /* Teal success */
+    --chart-4: 38 92% 50%;           /* Amber */
+    --chart-5: 280 65% 60%;          /* Purple */
   }
 }
 
