@@ -1,0 +1,7 @@
+# standards configuration
+[extends]
+registry = "github:chrismlittle123/standards-community"
+rulesets = ["typescript-internal"]
+
+[metadata]
+tier = "internal"
