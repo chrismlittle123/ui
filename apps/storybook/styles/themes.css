@@ -4,6 +4,9 @@
 /* Import Source Serif 4 for Newspaper theme - elegant editorial serif */
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500&display=swap');
 
+/* Import fonts for Prose theme - Libre Baskerville (serif) + IBM Plex Mono */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+
 /* ============================================
    THEME: BUSINESS (Stripe-inspired)
    Modern SaaS - Professional, trustworthy, polished
@@ -482,4 +485,172 @@
   --cream-100: 36 15% 18%;
   --cream-200: 36 12% 16%;
   --cream-300: 36 10% 14%;
+}
+
+/* ============================================
+   THEME: PROSE (Editorial Serif + Monospace)
+   Sophisticated typography with blue accents
+   Inspired by: palindromchat.com
+   ============================================ */
+
+/* Prose Light */
+[data-theme="prose"] {
+  --background: 0 0% 100%;
+  --foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  --primary: 217 91% 60%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222 47% 11%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+  --accent: 217 91% 60%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --success: 142 71% 45%;
+  --success-foreground: 0 0% 100%;
+  --warning: 38 92% 50%;
+  --warning-foreground: 0 0% 100%;
+  --info: 199 89% 48%;
+  --info-foreground: 0 0% 100%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 217 91% 60%;
+  --ring-offset: 0 0% 100%;
+  --radius: 0rem;
+
+  /* Shadow tokens - brutal style */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-elevated: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-brutal: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+  --shadow-brutal-lg: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+
+  /* Chart colors */
+  --chart-1: 217 91% 60%;
+  --chart-2: 222 47% 11%;
+  --chart-3: 142 71% 45%;
+  --chart-4: 38 92% 50%;
+  --chart-5: 262 83% 58%;
+
+  /* Status colors */
+  --status-completed: 142 71% 38%;
+  --status-completed-bg: 142 71% 45% / 0.1;
+  --status-processing: 217 91% 50%;
+  --status-processing-bg: 217 91% 60% / 0.1;
+  --status-pending: 38 92% 42%;
+  --status-pending-bg: 38 92% 50% / 0.1;
+  --status-failed: 0 84% 52%;
+  --status-failed-bg: 0 84% 60% / 0.1;
+  --status-cancelled: 215 16% 40%;
+  --status-cancelled-bg: 215 16% 47% / 0.08;
+
+  /* Extended blue palette */
+  --blue-400: 213 94% 68%;
+  --blue-500: 217 91% 60%;
+  --blue-600: 221 83% 53%;
+  --slate-100: 210 40% 96%;
+  --slate-200: 214 32% 91%;
+  --slate-500: 215 16% 47%;
+  --slate-900: 222 47% 11%;
+
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+  letter-spacing: -0.01em;
+}
+
+/* Prose Dark */
+[data-theme="prose"].dark,
+[data-theme="prose"] .dark {
+  --background: 222 47% 11%;
+  --foreground: 210 40% 98%;
+  --card: 217 33% 17%;
+  --card-foreground: 210 40% 98%;
+  --popover: 217 33% 17%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 213 94% 68%;
+  --primary-foreground: 222 47% 11%;
+  --secondary: 215 25% 27%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 215 25% 27%;
+  --muted-foreground: 215 20% 65%;
+  --accent: 213 94% 68%;
+  --accent-foreground: 222 47% 11%;
+  --destructive: 0 62% 58%;
+  --destructive-foreground: 0 0% 100%;
+  --success: 142 71% 45%;
+  --success-foreground: 0 0% 100%;
+  --warning: 38 92% 50%;
+  --warning-foreground: 222 47% 11%;
+  --info: 199 89% 48%;
+  --info-foreground: 222 47% 11%;
+  --border: 215 25% 27%;
+  --input: 217 33% 17%;
+  --ring: 213 94% 68%;
+  --ring-offset: 222 47% 11%;
+
+  /* Shadows - dark mode */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-card: 0 2px 5px -1px rgb(0 0 0 / 0.4), 0 1px 3px -1px rgb(0 0 0 / 0.3);
+  --shadow-elevated: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.4);
+  --shadow-brutal: 4px 4px 0px 0px rgba(59, 130, 246, 0.5);
+  --shadow-brutal-lg: 8px 8px 0px 0px rgba(59, 130, 246, 0.5);
+
+  /* Chart colors - dark mode */
+  --chart-1: 213 94% 68%;
+  --chart-2: 210 40% 98%;
+  --chart-3: 142 76% 55%;
+  --chart-4: 45 93% 58%;
+  --chart-5: 262 83% 68%;
+
+  /* Status colors - dark mode */
+  --status-completed: 142 71% 55%;
+  --status-completed-bg: 142 71% 45% / 0.15;
+  --status-processing: 213 94% 72%;
+  --status-processing-bg: 217 91% 60% / 0.15;
+  --status-pending: 38 92% 58%;
+  --status-pending-bg: 38 92% 50% / 0.12;
+  --status-failed: 0 62% 65%;
+  --status-failed-bg: 0 62% 58% / 0.15;
+  --status-cancelled: 215 20% 60%;
+  --status-cancelled-bg: 215 16% 47% / 0.12;
+
+  /* Extended palette - dark mode */
+  --blue-400: 213 94% 72%;
+  --blue-500: 213 94% 68%;
+  --blue-600: 217 91% 60%;
+  --slate-100: 217 33% 17%;
+  --slate-200: 215 25% 27%;
+  --slate-500: 215 20% 65%;
+  --slate-900: 210 40% 98%;
+}
+
+/* Prose typography - serif for headings, monospace for body */
+[data-theme="prose"] h1,
+[data-theme="prose"] h2,
+[data-theme="prose"] h3,
+[data-theme="prose"] h4,
+[data-theme="prose"] h5,
+[data-theme="prose"] h6,
+[data-theme="prose"] .font-serif {
+  font-family: "Libre Baskerville", Georgia, serif;
+  letter-spacing: -0.02em;
+}
+
+[data-theme="prose"] button,
+[data-theme="prose"] [role="button"],
+[data-theme="prose"] label,
+[data-theme="prose"] input,
+[data-theme="prose"] select,
+[data-theme="prose"] textarea,
+[data-theme="prose"] [class*="badge"],
+[data-theme="prose"] th,
+[data-theme="prose"] td {
+  font-family: "IBM Plex Mono", ui-monospace, monospace !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875em;
 }

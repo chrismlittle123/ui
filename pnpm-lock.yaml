@@ -29,6 +29,9 @@ importers:
       '@chrislittle/theme-newspaper':
         specifier: workspace:*
         version: link:../../packages/themes/newspaper
+      '@chrislittle/theme-prose':
+        specifier: workspace:*
+        version: link:../../packages/themes/prose
       '@chrislittle/ui-primitives':
         specifier: workspace:*
         version: link:../../packages/primitives

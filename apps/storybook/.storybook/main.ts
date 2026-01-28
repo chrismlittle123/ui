@@ -9,6 +9,7 @@ const themePathMap: Record<string, string> = {
   newspaper: path.resolve(__dirname, "../../../packages/themes/newspaper/src"),
   business: path.resolve(__dirname, "../../../packages/themes/business/src"),
   finchly: path.resolve(__dirname, "../../../packages/themes/finchly/src"),
+  prose: path.resolve(__dirname, "../../../packages/themes/prose/src"),
 };
 
 const config: StorybookConfig = {
