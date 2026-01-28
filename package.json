@@ -2,14 +2,13 @@
   "name": "ui-monorepo",
   "private": true,
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "typecheck": "turbo typecheck",
-    "clean": "turbo clean"
+    "build": "pnpm -r build",
+    "dev": "pnpm -r --parallel dev",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "clean": "pnpm -r clean"
   },
   "devDependencies": {
-    "turbo": "^2.3.0",
     "typescript": "^5.7.0"
   },
   "packageManager": "pnpm@9.15.0",
