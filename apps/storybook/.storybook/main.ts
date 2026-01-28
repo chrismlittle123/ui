@@ -10,6 +10,7 @@ const themePathMap: Record<string, string> = {
   business: path.resolve(__dirname, "../../../packages/themes/business/src"),
   finchly: path.resolve(__dirname, "../../../packages/themes/finchly/src"),
   ledger: path.resolve(__dirname, "../../../packages/themes/ledger/src"),
+  whitefire: path.resolve(__dirname, "../../../packages/themes/whitefire/src"),
 };
 
 const config: StorybookConfig = {

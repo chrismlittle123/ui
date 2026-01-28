@@ -26,6 +26,7 @@ const preview: Preview = {
           { value: "newspaper", title: "Newspaper (Editorial)" },
           { value: "finchly", title: "Finchly (Warm Terracotta)" },
           { value: "ledger", title: "Ledger (Serif + Mono)" },
+          { value: "whitefire", title: "Whitefire (Firecrawl)" },
         ],
         dynamicTitle: true,
       },
