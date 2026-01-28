@@ -8,6 +8,7 @@ const config: Config = {
     "../../packages/themes/graphite/src/**/*.{ts,tsx}",
     "../../packages/themes/newspaper/src/**/*.{ts,tsx}",
     "../../packages/themes/business/src/**/*.{ts,tsx}",
+    "../../packages/themes/finchly/src/**/*.{ts,tsx}",
   ],
   theme: {
     container: {

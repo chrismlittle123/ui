@@ -8,6 +8,7 @@ const themePathMap: Record<string, string> = {
   graphite: path.resolve(__dirname, "../../../packages/themes/graphite/src"),
   newspaper: path.resolve(__dirname, "../../../packages/themes/newspaper/src"),
   business: path.resolve(__dirname, "../../../packages/themes/business/src"),
+  finchly: path.resolve(__dirname, "../../../packages/themes/finchly/src"),
 };
 
 const config: StorybookConfig = {
