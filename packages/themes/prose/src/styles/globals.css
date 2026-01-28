@@ -1,0 +1,247 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   THEME: PROSE (Editorial, Serif + Monospace)
+   Sophisticated typography with blue accents
+   Inspired by: palindromchat.com
+   ============================================ */
+@layer base {
+  :root {
+    /* Prose: Clean whites, dark text, blue accents */
+    --background: 0 0% 100%;             /* #ffffff - Pure white */
+    --foreground: 222 47% 11%;           /* #0f172a - Slate 900 */
+    --card: 0 0% 100%;                   /* Pure white cards */
+    --card-foreground: 222 47% 11%;      /* Slate 900 */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 217 91% 60%;              /* #3b82f6 - Blue 500 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96%;            /* #f1f5f9 - Slate 100 */
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96%;                /* #f1f5f9 - Slate 100 */
+    --muted-foreground: 215 16% 47%;     /* #64748b - Slate 500 */
+    --accent: 217 91% 60%;               /* Blue 500 - same as primary */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;            /* #ef4444 - Red 500 */
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 71% 45%;              /* #22c55e - Green 500 */
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;               /* #f59e0b - Amber 500 */
+    --warning-foreground: 0 0% 100%;
+    --info: 199 89% 48%;                 /* #0ea5e9 - Sky 500 */
+    --info-foreground: 0 0% 100%;
+    --border: 214 32% 91%;               /* #e2e8f0 - Slate 200 */
+    --input: 214 32% 91%;                /* #e2e8f0 - Slate 200 */
+    --ring: 217 91% 60%;                 /* Blue 500 ring */
+    --ring-offset: 0 0% 100%;            /* Matches background */
+    --radius: 0rem;                      /* Sharp corners - editorial style */
+
+    /* Gradient support */
+    --gradient-start: 217 91% 60%;       /* Blue 500 */
+    --gradient-end: 221 83% 53%;         /* Blue 600 */
+
+    /* Shadow tokens - subtle and crisp */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-elevated: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-brutal: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+    --shadow-brutal-lg: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+
+    /* Chart colors for data visualization */
+    --chart-1: 217 91% 60%;              /* Blue */
+    --chart-2: 222 47% 11%;              /* Slate 900 */
+    --chart-3: 142 71% 45%;              /* Green */
+    --chart-4: 38 92% 50%;               /* Amber */
+    --chart-5: 262 83% 58%;              /* Violet */
+
+    /* Extended Prose color palette */
+    /* Blue scale (primary/accent) */
+    --blue-50: 214 100% 97%;
+    --blue-100: 214 95% 93%;
+    --blue-200: 213 97% 87%;
+    --blue-300: 212 96% 78%;
+    --blue-400: 213 94% 68%;
+    --blue-500: 217 91% 60%;
+    --blue-600: 221 83% 53%;
+    --blue-700: 224 76% 48%;
+    --blue-800: 226 71% 40%;
+    --blue-900: 224 64% 33%;
+
+    /* Slate scale (neutral/text) */
+    --slate-50: 210 40% 98%;
+    --slate-100: 210 40% 96%;
+    --slate-200: 214 32% 91%;
+    --slate-300: 213 27% 84%;
+    --slate-400: 215 20% 65%;
+    --slate-500: 215 16% 47%;
+    --slate-600: 215 19% 35%;
+    --slate-700: 215 25% 27%;
+    --slate-800: 217 33% 17%;
+    --slate-900: 222 47% 11%;
+
+    /* Status colors */
+    --status-completed: 142 71% 45%;
+    --status-completed-bg: 142 71% 45% / 0.1;
+    --status-processing: 217 91% 60%;
+    --status-processing-bg: 217 91% 60% / 0.1;
+    --status-pending: 38 92% 50%;
+    --status-pending-bg: 38 92% 50% / 0.1;
+    --status-failed: 0 84% 60%;
+    --status-failed-bg: 0 84% 60% / 0.1;
+    --status-cancelled: 215 16% 47%;
+    --status-cancelled-bg: 215 16% 47% / 0.08;
+
+    /* Button specific tokens */
+    --button-bg: 222 47% 11%;            /* Slate 900 */
+    --button-hover: 215 25% 27%;         /* Slate 700 */
+    --button-foreground: 0 0% 100%;
+    --button-primary-bg: 217 91% 60%;
+    --button-primary-foreground: 0 0% 100%;
+    --button-secondary-bg: 210 40% 96%;
+    --button-secondary-foreground: 222 47% 11%;
+  }
+
+  /* Dark mode */
+  .dark {
+    --background: 222 47% 11%;           /* Slate 900 */
+    --foreground: 210 40% 98%;           /* Slate 50 */
+    --card: 217 33% 17%;                 /* Slate 800 */
+    --card-foreground: 210 40% 98%;
+    --popover: 217 33% 17%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 213 94% 68%;              /* Blue 400 - brighter for dark */
+    --primary-foreground: 222 47% 11%;
+    --secondary: 215 25% 27%;            /* Slate 700 */
+    --secondary-foreground: 210 40% 98%;
+    --muted: 215 25% 27%;
+    --muted-foreground: 215 20% 65%;     /* Slate 400 */
+    --accent: 213 94% 68%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 62% 58%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 222 47% 11%;
+    --info: 199 89% 48%;
+    --info-foreground: 222 47% 11%;
+    --border: 215 25% 27%;
+    --input: 217 33% 17%;
+    --ring: 213 94% 68%;
+    --ring-offset: 222 47% 11%;
+
+    /* Gradient - brighter for dark */
+    --gradient-start: 213 94% 68%;
+    --gradient-end: 217 91% 60%;
+
+    /* Shadows - more subtle in dark mode */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+    --shadow-card: 0 2px 5px -1px rgb(0 0 0 / 0.4), 0 1px 3px -1px rgb(0 0 0 / 0.3);
+    --shadow-elevated: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.4);
+    --shadow-brutal: 4px 4px 0px 0px rgba(59, 130, 246, 0.5);
+    --shadow-brutal-lg: 8px 8px 0px 0px rgba(59, 130, 246, 0.5);
+
+    /* Chart colors - brighter for dark mode */
+    --chart-1: 213 94% 68%;
+    --chart-2: 210 40% 98%;
+    --chart-3: 142 76% 55%;
+    --chart-4: 45 93% 58%;
+    --chart-5: 262 83% 68%;
+
+    /* Button tokens - dark mode */
+    --button-bg: 210 40% 98%;
+    --button-hover: 214 32% 91%;
+    --button-foreground: 222 47% 11%;
+    --button-primary-bg: 213 94% 68%;
+    --button-primary-foreground: 222 47% 11%;
+    --button-secondary-bg: 215 25% 27%;
+    --button-secondary-foreground: 210 40% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Default to system fonts, consumers should load Google Fonts */
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Custom animations for Prose theme */
+@keyframes scan {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-from-bottom {
+  from {
+    transform: translateY(0.5rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes underline-grow {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+.animate-slide-in {
+  animation: slide-in-from-bottom 0.3s ease-out;
+}
+
+.animate-underline-grow {
+  animation: underline-grow 0.5s ease-out forwards;
+}
+
+/* Prose-specific utility classes */
+.font-serif {
+  font-family: "Libre Baskerville", Georgia, Cambria, "Times New Roman", serif;
+}
+
+.font-mono {
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
+
+.font-sans {
+  font-family: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Editorial text styles */
+.text-editorial {
+  @apply font-serif text-foreground leading-tight tracking-tight;
+}
+
+.text-technical {
+  @apply font-mono text-muted-foreground uppercase tracking-widest text-sm;
+}
