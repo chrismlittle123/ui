@@ -7,6 +7,9 @@
 /* Import fonts for Prose theme - Libre Baskerville (serif) + IBM Plex Mono */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
 
+/* Import Inter font for Whitefire theme */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 /* ============================================
    THEME: BUSINESS (Stripe-inspired)
    Modern SaaS - Professional, trustworthy, polished
@@ -660,9 +663,6 @@
    Warm orange accent on clean white
    Inspired by: firecrawl.dev
    ============================================ */
-
-/* Import Inter font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 /* Whitefire Light */
 [data-theme="whitefire"] {
