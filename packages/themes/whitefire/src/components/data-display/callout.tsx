@@ -39,16 +39,16 @@ const Callout = React.forwardRef<HTMLDivElement, CalloutProps>(
         {...props}
       >
         {icon && (
-          <div className="flex-shrink-0 text-primary [&_svg]:size-5">
+          <div className="flex-shrink-0 text-primary [&_svg]:size-[18px]">
             {icon}
           </div>
         )}
-        <div className="flex-1 space-y-1">
+        <div className="flex-1 space-y-0.5">
           {title && (
-            <p className="font-semibold text-foreground">{title}</p>
+            <p className="font-semibold text-[14px] text-foreground">{title}</p>
           )}
           {description && (
-            <p className="text-sm text-muted-foreground">{description}</p>
+            <p className="text-[13px] text-muted-foreground">{description}</p>
           )}
           {children}
         </div>

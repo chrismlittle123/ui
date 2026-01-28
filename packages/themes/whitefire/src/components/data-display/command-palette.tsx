@@ -35,12 +35,12 @@ const CommandPaletteInput = React.forwardRef<
   CommandPaletteInputProps
 >(({ className, icon, ...props }, ref) => {
   return (
-    <div className="flex items-center border-b px-4">
-      {icon || <Search className="mr-3 h-4 w-4 shrink-0 text-muted-foreground" />}
+    <div className="flex items-center border-b px-3">
+      {icon || <Search className="mr-2.5 h-4 w-4 shrink-0 text-muted-foreground" />}
       <input
         ref={ref}
         className={cn(
-          "flex h-12 w-full bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50",
+          "flex h-10 w-full bg-transparent py-2.5 text-[13px] outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50",
           className
         )}
         {...props}
@@ -77,7 +77,7 @@ const CommandPaletteItem = React.forwardRef<
     <div
       ref={ref}
       className={cn(
-        "relative flex cursor-pointer select-none items-center rounded-lg px-3 py-2.5 text-sm outline-none transition-colors",
+        "relative flex cursor-pointer select-none items-center rounded-lg px-3 py-2 text-[13px] outline-none transition-colors",
         selected
           ? "bg-accent text-accent-foreground"
           : "hover:bg-accent hover:text-accent-foreground",
@@ -86,7 +86,7 @@ const CommandPaletteItem = React.forwardRef<
       {...props}
     >
       {icon && (
-        <span className={cn("mr-3 [&_svg]:size-4", selected && "text-primary")}>
+        <span className={cn("mr-2.5 [&_svg]:size-[16px]", selected && "text-primary")}>
           {icon}
         </span>
       )}

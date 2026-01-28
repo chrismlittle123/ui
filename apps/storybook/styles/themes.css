@@ -730,6 +730,54 @@
 
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   letter-spacing: -0.01em;
+  font-size: 14px;
+}
+
+/* Whitefire typography - smaller, tighter */
+[data-theme="whitefire"] {
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.875rem;
+  --text-lg: 1rem;
+}
+
+[data-theme="whitefire"] body,
+[data-theme="whitefire"] p,
+[data-theme="whitefire"] span,
+[data-theme="whitefire"] div {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+[data-theme="whitefire"] h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+[data-theme="whitefire"] h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+[data-theme="whitefire"] h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+[data-theme="whitefire"] button,
+[data-theme="whitefire"] input,
+[data-theme="whitefire"] select,
+[data-theme="whitefire"] textarea,
+[data-theme="whitefire"] label {
+  font-size: 0.8125rem;
+}
+
+[data-theme="whitefire"] .text-sm {
+  font-size: 0.75rem !important;
+}
+
+[data-theme="whitefire"] .text-xs {
+  font-size: 0.6875rem !important;
 }
 
 /* Whitefire Dark */

@@ -14,25 +14,25 @@ const FeatureCard = React.forwardRef<HTMLDivElement, FeatureCardProps>(
       <div
         ref={ref}
         className={cn(
-          "group relative rounded-xl border bg-card p-6 transition-all duration-200 hover:shadow-card",
+          "group relative rounded-xl border bg-card p-5 transition-all duration-200 hover:shadow-card",
           className
         )}
         {...props}
       >
-        <div className="flex items-start justify-between gap-4">
-          <div className="flex items-start gap-4">
+        <div className="flex items-start justify-between gap-3">
+          <div className="flex items-start gap-3">
             {icon && (
-              <div className="flex-shrink-0 text-primary [&_svg]:size-6">
+              <div className="flex-shrink-0 text-primary [&_svg]:size-[18px]">
                 {icon}
               </div>
             )}
-            <div className="space-y-1.5">
+            <div className="space-y-1">
               <div className="flex items-center gap-2">
-                <h3 className="font-semibold text-foreground">{title}</h3>
+                <h3 className="font-semibold text-[14px] text-foreground">{title}</h3>
                 {badge}
               </div>
               {description && (
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-[13px] text-muted-foreground leading-relaxed">
                   {description}
                 </p>
               )}

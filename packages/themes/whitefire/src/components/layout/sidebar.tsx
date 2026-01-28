@@ -67,16 +67,16 @@ const SidebarItem = React.forwardRef<HTMLButtonElement, SidebarItemProps>(
       <button
         ref={ref}
         className={cn(
-          "flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors",
+          "flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-[13px] font-medium transition-colors",
           active
-            ? "bg-accent text-accent-foreground"
+            ? "bg-accent text-primary"
             : "text-muted-foreground hover:bg-muted hover:text-foreground",
           className
         )}
         {...props}
       >
         {icon && (
-          <span className={cn("[&_svg]:size-5", active && "text-primary")}>
+          <span className={cn("[&_svg]:size-[18px]", active && "text-primary")}>
             {icon}
           </span>
         )}
