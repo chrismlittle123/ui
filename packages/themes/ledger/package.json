@@ -1,7 +1,7 @@
 {
-  "name": "@chrislittle/theme-prose",
+  "name": "@chrislittle/theme-ledger",
   "version": "0.0.1",
-  "description": "Prose theme - Editorial, sophisticated serif + monospace typography with blue accents",
+  "description": "Ledger theme - Editorial, sophisticated serif + monospace typography with blue accents",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",

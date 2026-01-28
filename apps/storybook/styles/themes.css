@@ -488,13 +488,13 @@
 }
 
 /* ============================================
-   THEME: PROSE (Editorial Serif + Monospace)
+   THEME: LEDGER (Editorial Serif + Monospace)
    Sophisticated typography with blue accents
    Inspired by: palindromchat.com
    ============================================ */
 
 /* Prose Light */
-[data-theme="prose"] {
+[data-theme="ledger"] {
   --background: 0 0% 100%;
   --foreground: 222 47% 11%;
   --card: 0 0% 100%;
@@ -563,8 +563,8 @@
 }
 
 /* Prose Dark */
-[data-theme="prose"].dark,
-[data-theme="prose"] .dark {
+[data-theme="ledger"].dark,
+[data-theme="ledger"] .dark {
   --background: 222 47% 11%;
   --foreground: 210 40% 98%;
   --card: 217 33% 17%;
@@ -629,26 +629,26 @@
 }
 
 /* Prose typography - serif for headings, monospace for body */
-[data-theme="prose"] h1,
-[data-theme="prose"] h2,
-[data-theme="prose"] h3,
-[data-theme="prose"] h4,
-[data-theme="prose"] h5,
-[data-theme="prose"] h6,
-[data-theme="prose"] .font-serif {
+[data-theme="ledger"] h1,
+[data-theme="ledger"] h2,
+[data-theme="ledger"] h3,
+[data-theme="ledger"] h4,
+[data-theme="ledger"] h5,
+[data-theme="ledger"] h6,
+[data-theme="ledger"] .font-serif {
   font-family: "Libre Baskerville", Georgia, serif;
   letter-spacing: -0.02em;
 }
 
-[data-theme="prose"] button,
-[data-theme="prose"] [role="button"],
-[data-theme="prose"] label,
-[data-theme="prose"] input,
-[data-theme="prose"] select,
-[data-theme="prose"] textarea,
-[data-theme="prose"] [class*="badge"],
-[data-theme="prose"] th,
-[data-theme="prose"] td {
+[data-theme="ledger"] button,
+[data-theme="ledger"] [role="button"],
+[data-theme="ledger"] label,
+[data-theme="ledger"] input,
+[data-theme="ledger"] select,
+[data-theme="ledger"] textarea,
+[data-theme="ledger"] [class*="badge"],
+[data-theme="ledger"] th,
+[data-theme="ledger"] td {
   font-family: "IBM Plex Mono", ui-monospace, monospace !important;
   text-transform: uppercase;
   letter-spacing: 0.05em;

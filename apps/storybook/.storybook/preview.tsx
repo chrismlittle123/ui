@@ -25,7 +25,7 @@ const preview: Preview = {
           { value: "business", title: "Business (Stripe)" },
           { value: "newspaper", title: "Newspaper (Editorial)" },
           { value: "finchly", title: "Finchly (Warm Terracotta)" },
-          { value: "prose", title: "Prose (Serif + Mono)" },
+          { value: "ledger", title: "Ledger (Serif + Mono)" },
         ],
         dynamicTitle: true,
       },
