@@ -1,7 +1,39 @@
-# standards configuration
-[extends]
-registry = "github:chrismlittle123/standards-community"
-rulesets = ["typescript-internal"]
+# @standards-kit/conform configuration
 
 [metadata]
 tier = "internal"
+
+[code.linting.eslint]
+enabled = false          # ESLint lives at package level
+
+[code.types.tsc]
+enabled = false          # TypeScript checking at package level
+
+[code.unused.knip]
+enabled = false          # Knip at package level
+
+[code.security.secrets]
+enabled = true
+
+[code.naming]
+enabled = true
+
+[[code.naming.rules]]
+extensions = ["ts", "tsx"]
+file_case = "kebab-case"
+folder_case = "kebab-case"
+
+[process.ci]
+enabled = true
+
+[process.commits]
+enabled = true
+types = ["feat", "fix", "chore", "docs", "refactor", "test", "style", "perf", "ci", "build"]
+require_scope = false
+max_subject_length = 100
+
+[process.repo]
+enabled = true
+
+[process.forbidden_files]
+enabled = true
