@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-This plan outlines the creation of a new "finchly" UI library theme, directly inspired by the [palindrom-ai/finchly](https://github.com/palindrom-ai/finchly) repository. The finchly theme features a warm, earthy color palette with terracotta primary colors and cream backgrounds, creating a distinctive aesthetic that differs from the existing business (Stripe-inspired) and newspaper (editorial) themes.
+This plan outlines the creation of a new "finchly" UI library theme, directly inspired by the [progression-labs/finchly](https://github.com/progression-labs/finchly) repository. The finchly theme features a warm, earthy color palette with terracotta primary colors and cream backgrounds, creating a distinctive aesthetic that differs from the existing business (Stripe-inspired) and newspaper (editorial) themes.
 
 Additionally, several new components discovered in the finchly repo will be added to all three themes (finchly, business, and newspaper) to expand the component library.
 

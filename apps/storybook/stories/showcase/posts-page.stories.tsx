@@ -111,32 +111,32 @@ const PostsPage = () => {
 
   const posts = [
     {
-      author: "chris@palindrom.ai",
+      author: "chris@progression-labs.ai",
       timestamp: "about 4 hours ago",
       title: "Description of Agentation",
       description: "please add a description of Agentation",
     },
     {
-      author: "chris@palindrom.ai",
+      author: "chris@progression-labs.ai",
       timestamp: "2 days ago",
       title: "Productivity tool for personal use",
       description: "add this as a productivity tool for personal use",
     },
     {
-      author: "chris@palindrom.ai",
+      author: "chris@progression-labs.ai",
       timestamp: "3 days ago",
       title: "Claude design plugin recommendation",
       description:
         "In Claude skills? Thanks I'll check it out. add claude design plugin as a great frontend design plugin",
     },
     {
-      author: "chris@palindrom.ai",
+      author: "chris@progression-labs.ai",
       timestamp: "4 days ago",
       title: "MCP server integration notes",
       description: "Documentation on setting up MCP servers with the finchly platform",
     },
     {
-      author: "alex@palindrom.ai",
+      author: "alex@progression-labs.ai",
       timestamp: "5 days ago",
       title: "Real-time voice processing architecture",
       description: "Overview of the livekit integration for real-time voice capture",
