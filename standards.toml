@@ -36,3 +36,6 @@ enabled = true
 
 [process.forbidden_files]
 enabled = true
+
+[monorepo]
+exclude = ["apps/storybook", "packages/ui"]
