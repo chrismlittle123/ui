@@ -1,0 +1,37 @@
+# @standards-kit/conform configuration for packages/ui
+
+[metadata]
+tier = "internal"
+
+[extends]
+registry = "github:chrismlittle123/standards"
+rulesets = ["typescript-internal"]
+
+[code.linting.eslint]
+enabled = false
+
+[code.types.tsc]
+enabled = false
+
+[code.unused.knip]
+enabled = false
+
+[code.security.secrets]
+enabled = true
+
+[code.naming]
+enabled = true
+
+[[code.naming.rules]]
+extensions = ["ts", "tsx"]
+file_case = "kebab-case"
+folder_case = "kebab-case"
+
+[process.ci]
+enabled = false          # CI managed at monorepo root
+
+[process.repo]
+enabled = false          # Repo checks at monorepo root
+
+[process.forbidden_files]
+enabled = true
