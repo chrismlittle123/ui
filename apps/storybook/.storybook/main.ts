@@ -5,12 +5,12 @@ import path from "path";
 const activeTheme = process.env.STORYBOOK_THEME || "graphite";
 
 const themePathMap: Record<string, string> = {
-  graphite: path.resolve(__dirname, "../../../packages/themes/graphite/src"),
-  newspaper: path.resolve(__dirname, "../../../packages/themes/newspaper/src"),
-  business: path.resolve(__dirname, "../../../packages/themes/business/src"),
-  finchly: path.resolve(__dirname, "../../../packages/themes/finchly/src"),
-  ledger: path.resolve(__dirname, "../../../packages/themes/ledger/src"),
-  whitefire: path.resolve(__dirname, "../../../packages/themes/whitefire/src"),
+  graphite: path.resolve(__dirname, "../../../packages/ui/src/graphite"),
+  newspaper: path.resolve(__dirname, "../../../packages/ui/src/newspaper"),
+  business: path.resolve(__dirname, "../../../packages/ui/src/business"),
+  finchly: path.resolve(__dirname, "../../../packages/ui/src/finchly"),
+  ledger: path.resolve(__dirname, "../../../packages/ui/src/ledger"),
+  whitefire: path.resolve(__dirname, "../../../packages/ui/src/whitefire"),
 };
 
 const config: StorybookConfig = {
@@ -32,14 +32,14 @@ const config: StorybookConfig = {
     return mergeConfig(config, {
       resolve: {
         alias: {
+          "@chrislittle/theme-finchly": path.resolve(
+            __dirname,
+            "../../../packages/ui/src/finchly"
+          ),
           "@chrislittle/theme": themePathMap[activeTheme],
           "@chrislittle/theme-core": path.resolve(
             __dirname,
-            "../../../packages/themes/core/src"
-          ),
-          "@chrislittle/ui-primitives": path.resolve(
-            __dirname,
-            "../../../packages/primitives/src"
+            "../../../packages/ui/src/core"
           ),
         },
       },

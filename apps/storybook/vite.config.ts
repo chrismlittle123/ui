@@ -8,7 +8,7 @@ export default defineConfig({
     alias: {
       "@chrislittle/theme-core": path.resolve(
         __dirname,
-        "../../packages/themes/core/src"
+        "../../packages/ui/src/core"
       ),
     },
   },

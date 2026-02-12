@@ -4,11 +4,7 @@ const config: Config = {
   darkMode: ["class"],
   content: [
     "./stories/**/*.{ts,tsx}",
-    "../../packages/themes/core/src/**/*.{ts,tsx}",
-    "../../packages/themes/graphite/src/**/*.{ts,tsx}",
-    "../../packages/themes/newspaper/src/**/*.{ts,tsx}",
-    "../../packages/themes/business/src/**/*.{ts,tsx}",
-    "../../packages/themes/finchly/src/**/*.{ts,tsx}",
+    "../../packages/ui/src/**/*.{ts,tsx}",
   ],
   theme: {
     container: {

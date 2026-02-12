@@ -1,0 +1,95 @@
+{
+  "name": "@chrismlittle123/ui",
+  "version": "0.1.0",
+  "description": "Multi-theme UI component library",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./core": {
+      "import": "./dist/core/index.js",
+      "types": "./dist/core/index.d.ts"
+    },
+    "./core/styles.css": "./dist/core/styles.css",
+    "./graphite": {
+      "import": "./dist/graphite/index.js",
+      "types": "./dist/graphite/index.d.ts"
+    },
+    "./graphite/styles.css": "./dist/graphite/styles.css",
+    "./newspaper": {
+      "import": "./dist/newspaper/index.js",
+      "types": "./dist/newspaper/index.d.ts"
+    },
+    "./newspaper/styles.css": "./dist/newspaper/styles.css",
+    "./business": {
+      "import": "./dist/business/index.js",
+      "types": "./dist/business/index.d.ts"
+    },
+    "./business/styles.css": "./dist/business/styles.css",
+    "./finchly": {
+      "import": "./dist/finchly/index.js",
+      "types": "./dist/finchly/index.d.ts"
+    },
+    "./finchly/styles.css": "./dist/finchly/styles.css",
+    "./ledger": {
+      "import": "./dist/ledger/index.js",
+      "types": "./dist/ledger/index.d.ts"
+    },
+    "./ledger/styles.css": "./dist/ledger/styles.css",
+    "./whitefire": {
+      "import": "./dist/whitefire/index.js",
+      "types": "./dist/whitefire/index.d.ts"
+    },
+    "./whitefire/styles.css": "./dist/whitefire/styles.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup && node scripts/copy-styles.js",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.0",
+    "@radix-ui/react-alert-dialog": "^1.1.0",
+    "@radix-ui/react-avatar": "^1.1.0",
+    "@radix-ui/react-checkbox": "^1.1.0",
+    "@radix-ui/react-dialog": "^1.1.0",
+    "@radix-ui/react-dropdown-menu": "^2.1.0",
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-popover": "^1.1.0",
+    "@radix-ui/react-select": "^2.1.0",
+    "@radix-ui/react-separator": "^1.1.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-switch": "^1.1.0",
+    "@radix-ui/react-tabs": "^1.1.0",
+    "@radix-ui/react-toast": "^1.2.0",
+    "@radix-ui/react-toggle": "^1.1.0",
+    "@radix-ui/react-tooltip": "^1.1.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "lucide-react": "^0.469.0",
+    "tailwind-merge": "^2.6.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "tailwindcss": "^3.4.0",
+    "tailwindcss-animate": "^1.0.7",
+    "tsup": "^8.3.0",
+    "typescript": "^5.7.0"
+  }
+}

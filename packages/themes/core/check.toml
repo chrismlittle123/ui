@@ -1,4 +1,0 @@
-# @standards-kit/conform configuration
-[extends]
-registry = "github:chrismlittle123/standards-community"
-rulesets = ["typescript-internal"]

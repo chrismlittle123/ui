@@ -1,30 +1,14 @@
 {
-  "name": "@chrislittle/storybook",
+  "name": "@chrismlittle123/storybook",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "STORYBOOK_THEME=graphite storybook dev -p 6006",
-    "dev:graphite": "STORYBOOK_THEME=graphite storybook dev -p 6006",
-    "dev:newspaper": "STORYBOOK_THEME=newspaper storybook dev -p 6007",
-    "dev:business": "STORYBOOK_THEME=business storybook dev -p 6008",
-    "dev:finchly": "STORYBOOK_THEME=finchly storybook dev -p 6009",
-    "dev:ledger": "STORYBOOK_THEME=ledger storybook dev -p 6010",
-    "dev:whitefire": "STORYBOOK_THEME=whitefire storybook dev -p 6011",
+    "dev": "storybook dev -p 6006",
     "build": "storybook build",
-    "build:graphite": "STORYBOOK_THEME=graphite storybook build -o storybook-static-graphite",
-    "build:newspaper": "STORYBOOK_THEME=newspaper storybook build -o storybook-static-newspaper",
-    "build:business": "STORYBOOK_THEME=business storybook build -o storybook-static-business",
     "clean": "rm -rf storybook-static storybook-static-*"
   },
   "dependencies": {
-    "@chrislittle/theme-business": "workspace:*",
-    "@chrislittle/theme-core": "workspace:*",
-    "@chrislittle/theme-finchly": "workspace:*",
-    "@chrislittle/theme-graphite": "workspace:*",
-    "@chrislittle/theme-ledger": "workspace:*",
-    "@chrislittle/theme-newspaper": "workspace:*",
-    "@chrislittle/theme-whitefire": "workspace:*",
-    "@chrislittle/ui-primitives": "workspace:*",
+    "@chrismlittle123/ui": "workspace:*",
     "lucide-react": "^0.469.0",
     "react": "^18.3.0",
     "react-dom": "^18.3.0"
