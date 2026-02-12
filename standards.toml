@@ -29,6 +29,7 @@ folder_case = "kebab-case"
 
 [process.ci]
 enabled = true
+require_workflows = ["ci.yml"]
 
 [process.repo]
 enabled = true
